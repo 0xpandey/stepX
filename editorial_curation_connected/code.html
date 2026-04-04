@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#ffffff",
+                    "primary-fixed": "#c3f400",
+                    "inverse-surface": "#e5e2e1",
+                    "tertiary-fixed-dim": "#b6c9d8",
+                    "secondary": "#b5d25e",
+                    "on-error": "#690005",
+                    "surface-dim": "#131313",
+                    "secondary-container": "#5d7602",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-bright": "#3a3939",
+                    "on-surface": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "error": "#ffb4ab",
+                    "surface-container-high": "#2a2a2a",
+                    "background": "#131313",
+                    "inverse-on-surface": "#313030",
+                    "error-container": "#93000a",
+                    "tertiary-fixed": "#d2e5f5",
+                    "surface": "#131313",
+                    "primary-container": "#c3f400",
+                    "on-secondary": "#283500",
+                    "on-secondary-container": "#defd83",
+                    "on-primary": "#283500",
+                    "on-secondary-fixed-variant": "#3c4d00",
+                    "tertiary": "#ffffff",
+                    "outline-variant": "#444933",
+                    "on-secondary-fixed": "#161e00",
+                    "on-primary-fixed": "#161e00",
+                    "on-background": "#e5e2e1",
+                    "on-tertiary-fixed": "#0b1d29",
+                    "outline": "#8e9379",
+                    "inverse-primary": "#506600",
+                    "on-tertiary": "#21323e",
+                    "secondary-fixed": "#d0ef77",
+                    "surface-tint": "#abd600",
+                    "primary-fixed-dim": "#abd600",
+                    "on-primary-container": "#556d00",
+                    "tertiary-container": "#d2e5f5",
+                    "on-tertiary-container": "#556774",
+                    "on-surface-variant": "#c4c9ac",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-highest": "#353534",
+                    "secondary-fixed-dim": "#b5d25e",
+                    "surface-variant": "#353534",
+                    "on-tertiary-fixed-variant": "#374956",
+                    "surface-container": "#201f1f",
+                    "on-primary-fixed-variant": "#3c4d00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-via-blur {
+            background: linear-gradient(to bottom, rgba(19, 19, 19, 0.8), rgba(19, 19, 19, 0));
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/60 backdrop-blur-xl shadow-[0_0_40px_rgba(204,255,0,0.04)]">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-none">
+<a class="text-2xl font-black tracking-tighter text-white hover:text-[#CCFF00] transition-colors font-headline uppercase" href="{{DATA:SCREEN:SCREEN_5}}">StepX Noir</a>
+<div class="hidden md:flex items-center gap-12 font-headline tracking-tighter uppercase font-bold">
+<a class="text-white/70 hover:text-white transition-colors" href="#">The Vault</a>
+<a class="text-white/70 hover:text-white transition-colors" href="{{DATA:SCREEN:SCREEN_27}}">Drops</a>
+<a class="text-[#CCFF00] border-b-2 border-[#CCFF00] pb-1" href="{{DATA:SCREEN:SCREEN_39}}">Curation</a>
+</div>
+<div class="flex items-center gap-6">
+<a class="text-white/70 hover:text-[#CCFF00] transition-transform active:scale-90 duration-200" href="{{DATA:SCREEN:SCREEN_30}}"><span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span></a>
+<a class="text-white/70 hover:text-[#CCFF00] transition-transform active:scale-90 duration-200" href="{{DATA:SCREEN:SCREEN_21}}"><span class="material-symbols-outlined" data-icon="person">person</span></a>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-end px-8 pb-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="The Editorial Hero" class="w-full h-full object-cover grayscale brightness-50" data-alt="dramatic wide shot of rare designer sneakers displayed in a dark minimalist gallery with sharp geometric shadows and overhead spotlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCccV-lsw9q27dbM0s__TKD6-BpC-zjZLcv6E8myC2emkjbThvxDiOHBt6h_YlBN8Phmn9E9I6norAB8p-jY1Dmt8AKk5lb_HWZmg6Ba4vm_dkKoXjBPBt3mD_KJPFTEqE2f6tl2zHeSF-x2ydRWGSJ5GEW06C4z5SHWlURzB6trpUqgLbc1i3I7LX8ELsu_6mhavACMjGuAMkEAATbCL5JzOiYux8vMSmgZLE-A4HpcnrFhXaYE_3UdepmkDc_vIoEtgFE1Ncf4g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-7xl mx-auto">
+<p class="font-label uppercase tracking-[0.4em] text-primary-fixed mb-4 text-sm font-bold">Volume 01 / Archive Noir</p>
+<h1 class="font-headline text-[12vw] md:text-[10rem] font-black leading-[0.8] tracking-tighter uppercase mb-8">The<br/>Editorial</h1>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+<p class="max-w-xl text-lg text-white/60 leading-relaxed font-body">
+                        Beyond the lace and leather. Exploring the tectonic shifts in footwear design, the architects of hype, and the cultural relics that define our era.
+                    </p>
+<a class="bg-primary-fixed text-on-primary-fixed px-8 py-4 font-headline font-bold uppercase tracking-widest text-sm hover:scale-105 active:scale-95 transition-all inline-block" href="{{DATA:SCREEN:SCREEN_26}}">Explore Vault</a>
+</div>
+</div>
+</section>
+<!-- The Craft Section -->
+<section class="py-32 px-8 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-center gap-4 mb-20">
+<div class="h-[2px] w-12 bg-primary-fixed"></div>
+<h2 class="font-headline text-4xl font-bold uppercase tracking-tighter">The Craft</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-7 group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden mb-8 bg-surface-container-low">
+<img alt="The Craftsmanship" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110" data-alt="extreme close-up of premium sneaker materials showing intricate leather stitching and high-tech mesh textures in monochromatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt--BF0PfiC7Euhm2YhEN3T22tCBGYReXjKqW9_LCVCy4o2dv4Nu8Z1T6NexjZZ0w6RXtFwD-iSP7x7dXbnFh3O8Upsg-8HRxcP-ZkRdm0l5rcvE2VtcLx81Lae7lGPUA37v-xk9Mnvaz4Gz_x9U7wBdToYeCYUuGOM9JoThBWt3psQBgY0vG4aioPf3ecT2VVTYebohM0ToVXM9T3fShgHVTOqgh1Fs5YIUmqKip-PkJ3anh-Xh7cdsf1HlsLV8s5rEX3yqNyZg"/>
+</div>
+<p class="font-label text-primary-fixed text-xs uppercase tracking-widest mb-4">Deep Dive</p>
+<h3 class="font-headline text-5xl font-bold mb-6 tracking-tighter uppercase leading-none">Anatomy of an Icon</h3>
+<p class="text-white/40 font-body max-w-md leading-relaxed">Deconstructing the structural integrity of the phantom midsole and its impact on the silhouette of 2024.</p>
+</div>
+<div class="md:col-span-5 flex flex-col gap-24 pt-20">
+<div class="group cursor-pointer">
+<div class="aspect-square overflow-hidden mb-6 bg-surface-container-low">
+<img alt="Sub-article" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110" data-alt="top-down artistic view of a designer sneaker's sole with complex tread patterns and neon green accents against obsidian background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBluOLo6DpntMQoQAHsCdVzqzpkqYeZXshCSnDnji1hQ74uXhPGV9tLvGKA53PenBON0GyEJlAfBVwd5I4LB-gamaI5VlY1DQu7FJj18FazYqgEc86yAe-QPDii7a9nfRpKoOSA2DnXX0eVyF1rLj-yCaiDiBp4bX5G8GsT3s1AoAm8TqUSutRal5PBKmT-SnBkMnZ5IRpo5yvDfxFQV1K8L3-xDrq54-LZ7RUXvNul-hVVFmSqdVrrQm4SqSrh6gKNmjIalt33-g"/>
+</div>
+<h4 class="font-headline text-2xl font-bold uppercase tracking-tighter mb-2">Sustainable Obsidian</h4>
+<p class="text-white/40 text-sm font-body">The shift towards carbon-neutral leather sourcing.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square overflow-hidden mb-6 bg-surface-container-low">
+<img alt="Sub-article" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110" data-alt="minimalist studio product shot of a futuristic black sneaker with sharp edges and matte finishes floating in dark space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSQaxY5XSJszsa0vj5c0tofmZY6inXkdrd_ru3BeFA19HaAJ8PqkVT9dBMX4kUtU7pP05pPtd8mPnjTn-dOftpCjpuK_mv3ZJfP2h3TtLzhtVQ6skyZlmqIIh6SNsw5CavUYH2ueJO5IFJPFV1wGDosia_F16zfUre15KgoIkV3IEbZiDLsykbErddx35tnzhNvpDv9ZIEO0QFMXrMLx0eI-pvqJYaI4b2P-Q4w1DURGS2zyqLGX-nbuipYqB9KvcvgWTzwNe_Lg"/>
+</div>
+<h4 class="font-headline text-2xl font-bold uppercase tracking-tighter mb-2">Lacing Systems</h4>
+<p class="text-white/40 text-sm font-body">Revolutionary tension tech in the latest drop.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interviews Section -->
+<section class="py-32 px-8 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-20">
+<div class="flex items-center gap-4">
+<div class="h-[2px] w-12 bg-primary-fixed"></div>
+<h2 class="font-headline text-4xl font-bold uppercase tracking-tighter">Interviews</h2>
+</div>
+<a class="font-label text-xs uppercase tracking-widest text-primary-fixed border-b border-primary-fixed/20 pb-1" href="#">View all Stories</a>
+</div>
+<div class="flex flex-col gap-32">
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-1/2 overflow-hidden bg-surface-container-low">
+<img alt="Interview Subject" class="w-full aspect-[4/3] object-cover grayscale hover:scale-105 transition-transform duration-1000" data-alt="moody portrait of a sneaker designer in a dark studio wearing high-fashion techwear and glasses reflecting soft green light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJEXEL16oCemxPchq7HI7GHkEVMIp5l68gzyhGfnBaOQpr5LU_-BWG16fEbkWZBpQCX7W_g6w9GwDNTJKx5cQtFpsOGsoixSjZ00vQQtg7l9DQSyZnpAfiuKquv3wFlISf9jvmawyIyGg2FPrc88_N2NV_bu8vijqwYnqR0s2Ny-IutgwadwspJbZrP86y3-W7ulHDhvxS2FicNrRNVnoQA7dCYo1S4np3OoCU1H0XDrOor9AOjBlCbu-4j2RxMqXdHewsdOHQrA"/>
+</div>
+<div class="w-full md:w-1/2 md:pl-12">
+<span class="text-primary-fixed font-label text-[10px] tracking-[0.3em] uppercase block mb-4">Designer Profile</span>
+<h3 class="font-headline text-6xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-8">Kaelen <br/>Vance</h3>
+<blockquote class="text-2xl text-white/80 font-body font-light italic mb-8 leading-relaxed">
+                                "The shoe is no longer just footwear. It's a mobile installation piece that carries our identity across the urban landscape."
+                            </blockquote>
+<a class="inline-flex items-center gap-4 text-white hover:text-primary-fixed transition-colors" href="#">
+<span class="font-headline uppercase font-bold tracking-widest text-sm">Read the Conversation</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Cultural Archive (Bento Grid) -->
+<section class="py-32 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-center gap-4 mb-20">
+<div class="h-[2px] w-12 bg-primary-fixed"></div>
+<h2 class="font-headline text-4xl font-bold uppercase tracking-tighter">Cultural Archive</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[800px]">
+<div class="md:col-span-2 md:row-span-2 relative overflow-hidden group">
+<img alt="Archive Item 1" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="a classic vibrant red sneaker against a stark dark grey background symbolizing historical design evolution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjHabjSWIaH_PRS7_e24CA3WVJDjjgpPGUekhHJ8TWMPi2WLOhMkZJScSIQ-gNALsA9IYUoJuHXKmIj7ypBZs0OYBf5Y0KF8yMmHGjVQlhlEXEq52NL9UeulWtYaDxQz2X6xYFaYkIzqTiaSCxWmdRhB4I3X-rohdRf8HCT0U44J-GviQvJB6AA_eXNlFz_0jyJVq4tz4eZmhFQqDUOAy5xPe_8hXfw_H-oEUWiAEFPMb6tAckC4LIFyrB3WTu7oiHRjpW7Nq2IQ"/>
+<div class="absolute inset-0 bg-black/40 p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity">
+<p class="font-headline text-2xl font-bold uppercase">Heritage Red</p>
+<p class="text-sm font-label text-white/60">Circa 1994</p>
+</div>
+</div>
+<div class="md:col-span-2 relative overflow-hidden group">
+<img alt="Archive Item 2" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="collection of vintage sneaker boxes stacked high in a dark warehouse setting with moody low-key lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2UUNSH-iLWM8ghX1ZU1Mt8hxDolGZluzBV6OaoZO5Y04WAqxSyN5lUFboCFq6osYtLZW57u4Da1Aa30J4T04VpEvdfaITjambkmEoJUr44D0E3vr7YuqsxzPJh-ePEI-7In08jtGWk-P2KNPcGNgWV5ZSZyjLQyZfy0P_TN863kGGy8AKAHMwqCal1mSKt6KSJ4HWXj7FnSiKlyXIceUMcN5G2JEP2JwrvN_kNCBe_hWtQEvCm37spW7jYbyjqJP3OJM7DSBWmw"/>
+<div class="absolute inset-0 bg-black/40 p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity">
+<p class="font-headline text-2xl font-bold uppercase">The Box Vault</p>
+<p class="text-sm font-label text-white/60">Storage Protocols</p>
+</div>
+</div>
+<div class="relative overflow-hidden group">
+<img alt="Archive Item 3" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="extreme close up of an weathered suede shoe revealing decades of use and character in high detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzhq4lnqDg7T14_8TbtijQZCyF1f3znLC7OI8eDjeuD5teQsGSGppncLFGnYy0tbEEORrfuOlLcRxtYbXdEfMD3fzddD8KH5Rsj8rxXcHLWwF32rRmTq4-wegEKC6WtAp4HQGn0-wt-LDEnpZvDcvG5EJlzmouXy488wO2WPRGkuIUFp1obCFkZMxN9UjhLEqC2wKLKa2ssmIBjrlonNTSZX1wJ3UtZS3g9_DeGSF2-WFK80DQ8_EQZhxZ58dDJ4Qewt-d5nm6mg"/>
+<div class="absolute inset-0 bg-black/40 p-4 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity">
+<p class="font-headline text-lg font-bold uppercase">Patina Studies</p>
+</div>
+</div>
+<div class="relative overflow-hidden group">
+<img alt="Archive Item 4" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="minimalist overhead shot of rare limited edition sneaker laces neatly coiled like modern art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaeNt0bQT_WK-xVpwL-avwk8PPJzr6wC-5dI1YieDrOcx7fbpvLKbh5E72_dgiGHiBbgfH7Hn20mmzdzA3gF2RgijMQ340CuwL8hKoKaH5OC8iTwWi00p6gRX2C7xKt5teuwNyD8rY3c5bMdcjHvxRLT4sDfHN6kVPQTQaqqToPbeOwPu_QEd2iXXyt2NRvKyMoN7ISc9ZZmI8rZcuP00vPuMu6TDktVOPfAibAd8EtX1ruWHa0_yq1vmLsMPfx-7VC0_X4Ig4Rw"/>
+<div class="absolute inset-0 bg-black/40 p-4 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity">
+<p class="font-headline text-lg font-bold uppercase">Lace Variants</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-40 px-8 bg-surface-container-lowest border-t border-white/5">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 italic">The Inner Circle</h2>
+<p class="text-white/50 mb-12 font-body text-lg leading-relaxed">Early access to drops, archival deep-dives, and exclusive member-only curation stories. No noise, just culture.</p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-1 bg-surface-container-high border-none px-6 py-5 text-sm font-label tracking-widest text-white focus:ring-1 focus:ring-primary-fixed outline-none" placeholder="ENTER YOUR EMAIL" type="email"/>
+<button class="bg-primary-fixed text-on-primary-fixed px-10 py-5 font-headline font-bold uppercase text-sm hover:bg-white transition-colors">Join</button>
+</form>
+<p class="text-[10px] text-white/20 mt-6 uppercase tracking-widest">By joining, you agree to our privacy protocols.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0E0E0E] w-full py-20 px-8 mt-32 border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-start w-full max-w-7xl mx-auto">
+<div class="mb-12 md:mb-0">
+<p class="font-['Space_Grotesk'] font-black text-[#CCFF00] text-3xl mb-8 uppercase">StepX Noir</p>
+<p class="font-['Manrope'] text-sm tracking-normal text-white/50 max-w-xs leading-relaxed italic">
+                    Engineering the future of footwear culture, one drop at a time.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+<div>
+<h5 class="font-headline text-white text-xs font-bold uppercase tracking-[0.2em] mb-6">Explore</h5>
+<div class="flex flex-col gap-4 font-['Manrope'] text-sm text-white/40">
+<a class="hover:text-[#CCFF00] transition-transform duration-300 hover:translate-x-1" href="{{DATA:SCREEN:SCREEN_26}}">The Vault</a>
+<a class="hover:text-[#CCFF00] transition-transform duration-300 hover:translate-x-1" href="{{DATA:SCREEN:SCREEN_27}}">Drops</a>
+<a class="text-white font-bold transition-transform duration-300 hover:translate-x-1" href="{{DATA:SCREEN:SCREEN_39}}">Curation</a>
+</div>
+</div>
+<div>
+<h5 class="font-headline text-white text-xs font-bold uppercase tracking-[0.2em] mb-6">Service</h5>
+<div class="flex flex-col gap-4 font-['Manrope'] text-sm text-white/40">
+<a class="hover:text-[#CCFF00] transition-transform duration-300 hover:translate-x-1" href="{{DATA:SCREEN:SCREEN_28}}">Membership</a>
+<a class="hover:text-[#CCFF00] transition-transform duration-300 hover:translate-x-1" href="#">Returns</a>
+<a class="hover:text-[#CCFF00] transition-transform duration-300 hover:translate-x-1" href="{{DATA:SCREEN:SCREEN_25}}">Authentication</a>
+</div>
+</div>
+<div>
+<h5 class="font-headline text-white text-xs font-bold uppercase tracking-[0.2em] mb-6">Legal</h5>
+<div class="flex flex-col gap-4 font-['Manrope'] text-sm text-white/40">
+<a class="hover:text-[#CCFF00] transition-transform duration-300 hover:translate-x-1" href="{{DATA:SCREEN:SCREEN_18}}">Privacy</a>
+<a class="hover:text-[#CCFF00] transition-transform duration-300 hover:translate-x-1" href="{{DATA:SCREEN:SCREEN_40}}">Terms</a>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-['Manrope'] text-sm tracking-normal text-white/50">© 2024 StepX Noir. Engineered for the Culture.</p>
+<div class="flex gap-8">
+<a class="text-white/20 hover:text-[#CCFF00] transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-white/20 hover:text-[#CCFF00] transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-4 bg-[#1C1B1B]/80 backdrop-blur-2xl z-50 rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-colors active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="grid_view">grid_view</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-bold">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-colors active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="schedule">schedule</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-bold">Drops</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#CCFF00] bg-[#CCFF00]/10 rounded-xl px-6 py-2 active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="lock_open">lock_open</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-bold">Vault</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-colors active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-bold">Profile</span>
+</a>
+</nav>
+</body></html>

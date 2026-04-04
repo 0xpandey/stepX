@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#131313",
+                        "primary-fixed-dim": "#abd600",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed-dim": "#b6c9d8",
+                        "on-tertiary": "#21323e",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-container": "#556d00",
+                        "on-tertiary-fixed-variant": "#374956",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-on-surface": "#313030",
+                        "primary": "#ffffff",
+                        "on-tertiary-container": "#556774",
+                        "on-error": "#690005",
+                        "tertiary-container": "#d2e5f5",
+                        "surface-container-highest": "#353534",
+                        "on-background": "#e5e2e1",
+                        "primary-container": "#c3f400",
+                        "surface-variant": "#353534",
+                        "secondary-fixed": "#d0ef77",
+                        "on-surface-variant": "#c4c9ac",
+                        "on-secondary-fixed": "#161e00",
+                        "surface-container": "#201f1f",
+                        "on-secondary": "#283500",
+                        "primary-fixed": "#c3f400",
+                        "surface-bright": "#3a3939",
+                        "secondary": "#b5d25e",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed": "#161e00",
+                        "background": "#131313",
+                        "outline": "#8e9379",
+                        "surface-container-low": "#1c1b1b",
+                        "surface": "#131313",
+                        "secondary-fixed-dim": "#b5d25e",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "on-primary": "#283500",
+                        "tertiary-fixed": "#d2e5f5",
+                        "outline-variant": "#444933",
+                        "secondary-container": "#5d7602",
+                        "inverse-primary": "#506600",
+                        "surface-tint": "#abd600",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#3c4d00",
+                        "on-secondary-container": "#defd83",
+                        "tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#0b1d29"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #c3f400 0%, #abd600 100%);
+        }
+        .glass-nav {
+            background: rgba(19, 19, 19, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 glass-nav flex justify-between items-center px-8 py-4 w-full max-w-none">
+<div class="flex items-center gap-12">
+<a class="text-2xl font-black italic text-[#CCFF00] tracking-tighter font-headline" href="/">StepX</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-headline font-bold tracking-tighter text-[#CCFF00] border-b-2 border-[#CCFF00] pb-1 hover:text-[#CCFF00] transition-colors duration-300" href="#">Home</a>
+<a class="font-headline font-bold tracking-tighter text-white/70 hover:text-[#CCFF00] transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_23}}">The Vault</a>
+<a class="font-headline font-bold tracking-tighter text-white/70 hover:text-[#CCFF00] transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_22}}">Drops</a>
+<a class="font-headline font-bold tracking-tighter text-white/70 hover:text-[#CCFF00] transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_29}}">Curation</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="md:hidden text-white/70 hover:text-[#CCFF00] transition-colors" onclick="window.location.href='{{DATA:SCREEN:SCREEN_17}}'">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="hidden lg:flex items-center bg-surface-container-highest px-4 py-2 rounded-lg gap-3 cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_2}}'">
+<span class="material-symbols-outlined text-white/50">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 text-white placeholder-white/30 font-label uppercase tracking-widest pointer-events-none" placeholder="Search Vault..." readonly="" type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="scale-95 active:scale-90 transition-transform relative" onclick="window.location.href='{{DATA:SCREEN:SCREEN_13}}'">
+<span class="material-symbols-outlined text-[#CCFF00]">shopping_bag</span>
+<span class="absolute -top-2 -right-2 bg-white text-on-primary-fixed text-[10px] font-bold px-1.5 rounded-full">2</span>
+</button>
+<button class="w-8 h-8 rounded-full overflow-hidden border border-white/10 active:scale-95 transition-transform" onclick="window.location.href='{{DATA:SCREEN:SCREEN_19}}'">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcCmzkuRu8Uh9vkAQhswY3_ZGWZ8FySSmNFNqEjD5yYBDRKin7CzMCCR3OuVqrUXLlwvXdEYzOQshzjeD4PC0LVFM1VjGJASYtwFs3KlorOZ8AWB30u8VhXQ4dqZzioJLkQLjJunTX6Rsf_90OdRZYA5n2AZWozQYsz-0-shHq51Ykf0I6VvAK9-5kNmBPYr5IbN-LAJT2GDgXH2zV7ZuXa6m-Duip7rscBH7x3XaJ_QjU8chKT51fs5joGlLJLq7Mk7TjAon_zA"/>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-surface">
+<div class="absolute inset-0 opacity-40">
+<div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary-fixed-dim/20 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-1/4 -left-20 w-96 h-96 bg-primary-fixed/10 blur-[100px] rounded-full"></div>
+</div>
+<div class="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="lg:col-span-7">
+<div class="inline-block px-3 py-1 bg-surface-container-high text-primary-fixed font-label text-[10px] tracking-[0.2em] uppercase mb-6">
+                Exclusive Drop
+            </div>
+<h1 class="font-headline font-bold text-6xl md:text-8xl lg:text-[10rem] leading-[0.85] tracking-tighter mb-8 italic">
+                Flat 20% <br/> <span class="text-primary-fixed-dim">OFF</span>
+</h1>
+<p class="font-body text-xl md:text-2xl text-white/60 max-w-xl mb-10 leading-relaxed">
+                Premium Sneakers for the culture. Limited Stock. <br class="hidden md:block"/> Free Delivery Across India.
+            </p>
+<div class="flex flex-wrap gap-6">
+<a class="kinetic-gradient text-on-primary-fixed px-10 py-5 font-headline font-black text-lg italic tracking-tighter uppercase rounded-lg hover:brightness-110 transition-all flex items-center gap-3" href="{{DATA:SCREEN:SCREEN_25}}">
+                    Shop Now
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="relative w-full aspect-square md:scale-125 lg:translate-x-12">
+<img alt="Premium Nike Sneaker" class="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(195,244,0,0.15)]" data-alt="Close-up profile shot of a premium neon and grey athletic sneaker on a dark background with dramatic side lighting and soft reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFsXTTKsKgYW8nKS6QYpQNNRfMfvhsB80nBH1cIPDv_K5qaAK3WC_SDiw6Oz3zEuq16-jcqscaAcGh5DDt_gH2xtm88dXdGnWJTkJ23UWmrbSWqifIE5-5sRspLU5pXRzjcpXLVtvIQGfikvBuKhUT3SjSrBASry0c9d3tDBC8BB1vBIDnB4GKcTM3FqrCKOilYllRcOs0Wq1k2aaII5zeTL3CXSgwUFkhYR5T8KANMCBmy6L8mjqlb1z_H5VV4c0Rxffwv7pMDA"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Featured Products -->
+<section class="bg-surface-container-lowest py-32">
+<div class="container mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+<div>
+<h2 class="font-headline font-bold text-5xl md:text-7xl tracking-tighter italic uppercase">Vault <span class="text-primary-fixed-dim">Heats</span></h2>
+<p class="text-white/40 font-label tracking-widest uppercase mt-4">Curated Artifacts of Street Culture</p>
+</div>
+<div class="text-right">
+<span class="text-error font-headline font-bold italic text-xl flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                    Only a few items left
+                </span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Product 1 -->
+<div class="bg-surface-container-low group cursor-pointer transition-all duration-500 hover:bg-surface-container-high relative" onclick="window.location.href='{{DATA:SCREEN:SCREEN_4}}'">
+<div class="absolute top-6 right-6 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="bg-primary-fixed p-3 rounded-full text-on-primary-fixed">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<div class="p-8 pb-0 aspect-[4/5] overflow-hidden">
+<img alt="Air Max 270" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 -rotate-12" data-alt="Vibrant red performance sneaker floating against a deep grey background with cinematic shadow and rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnm1vMfFJIgb2KALkQ8d0v2kJpTucqXx5Q0vkq3T9_MHXr6VTlf2zb4NvYE4uzmnGKOA5YVCbJB8auNVh4oz9wIH6NGJzONA_gstFMDKLRkoUoqy4GncSWB3x4ClZZuBncu46-AVcefBOw3iXHIr4qMpvdUh8f0e4cJ-zu7ba4D6LdqGVp_tuqOAPNowmF655CqavryXfHIUA8HyZ-wzT7rC2dWG0QWbWMvPVDlr_xLlkdyLhA_QA_mK3YWg8zfH64UXO6YuAB0g"/>
+</div>
+<div class="p-8 pt-0">
+<div class="font-label text-[10px] tracking-widest text-white/40 uppercase mb-2">Nike Sportswear</div>
+<h3 class="font-headline text-3xl font-bold italic tracking-tight text-white mb-2">Air Max 270 Elite</h3>
+<div class="flex items-center gap-4">
+<span class="font-headline text-2xl font-bold text-primary-fixed">₹14,995</span>
+<span class="font-body text-sm text-white/30 line-through">₹18,500</span>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-surface-container-high lg:-translate-y-12 group cursor-pointer transition-all duration-500 hover:bg-surface-container-highest relative" onclick="window.location.href='{{DATA:SCREEN:SCREEN_4}}'">
+<div class="absolute top-6 right-6 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="bg-primary-fixed p-3 rounded-full text-on-primary-fixed">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<div class="p-8 pb-0 aspect-[4/5] overflow-hidden">
+<img alt="Jordan 1 Retro" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 rotate-6" data-alt="Classic high-top basketball sneaker in cream and brown tones shot in a minimalist studio setting with soft top light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe3NauZZbDZn2jZwCyx7XazOdsG7vm3pTifL3JkUoOjWuO_sHAPXtMn3ZzcWROcRzvqvlyMJYowMnESYi7wXQA_EmTjWiBfBFl4UyYJIUM6-sJGjuuvFAQs8nnDnmfJXzX8xoXNyQ_pahFKMYffWyLyJ360ju2e4ZLcfcVyJGCAaZRiWQQu_g9g3icP68oPc5iUbSjTwz4wK7IUJcNQRphdH6xoVafwMRqLcPEfHapqkyEhszT55xsaK4i-PgmsvJcg2rSRZc_KQ"/>
+</div>
+<div class="p-8 pt-0">
+<div class="font-label text-[10px] tracking-widest text-white/40 uppercase mb-2">Jordan Brand</div>
+<h3 class="font-headline text-3xl font-bold italic tracking-tight text-white mb-2">Jordan 1 Retro OG</h3>
+<div class="flex items-center gap-4">
+<span class="font-headline text-2xl font-bold text-primary-fixed">₹16,495</span>
+<span class="font-body text-sm text-white/30 line-through">₹21,000</span>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-surface-container-low group cursor-pointer transition-all duration-500 hover:bg-surface-container-high relative" onclick="window.location.href='{{DATA:SCREEN:SCREEN_4}}'">
+<div class="absolute top-6 right-6 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="bg-primary-fixed p-3 rounded-full text-on-primary-fixed">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<div class="p-8 pb-0 aspect-[4/5] overflow-hidden">
+<img alt="Yeezy Boost" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 -rotate-12" data-alt="Abstract futuristic sneaker with chunky sole in pastel tones, shot from a low angle on an obsidian floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN3Z1Bjo9aCatRrtuLRUGW1huU9cQw7-k5PHr6s5NCyJP3W6v54jxFQJhwL3z2_OlgGv2OR7H2T98Tfwc8t7-2QH4lVLJnLtDIEAnoPc0bbCzhoVtiMbXIFgNuJPA1VgGlDX8lubW48kI_KPF3TYKuKAVUBzk8E1O9HT0LyJDhAauZh7yu_kmJ3F9QGtR8SdDt2rFRSa3SPSS5REmkiBHIH3K_Auaae1ORBLTAPaG8WMPmqH6Yhk4QiCLLeF_urJR6FUI3nyCiRA"/>
+</div>
+<div class="p-8 pt-0">
+<div class="font-label text-[10px] tracking-widest text-white/40 uppercase mb-2">Exclusive Series</div>
+<h3 class="font-headline text-3xl font-bold italic tracking-tight text-white mb-2">Neon Velocity X</h3>
+<div class="flex items-center gap-4">
+<span class="font-headline text-2xl font-bold text-primary-fixed">₹12,250</span>
+<span class="font-body text-sm text-white/30 line-through">₹15,000</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-32 bg-surface">
+<div class="container mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+<div class="flex flex-col gap-6">
+<span class="material-symbols-outlined text-primary-fixed text-5xl">verified</span>
+<h4 class="font-headline text-3xl font-bold italic tracking-tight">Guaranteed Authenticity</h4>
+<p class="text-white/50 leading-relaxed">Every pair in our vault undergoes a rigorous 10-point verification process by our in-house curators.</p>
+</div>
+<div class="flex flex-col gap-6">
+<span class="material-symbols-outlined text-primary-fixed text-5xl">local_shipping</span>
+<h4 class="font-headline text-3xl font-bold italic tracking-tight">Fast Shipping</h4>
+<p class="text-white/50 leading-relaxed">Priority handling and secure dispatch within 24 hours. Your heat reaches you faster than anyone else.</p>
+</div>
+<div class="flex flex-col gap-6">
+<span class="material-symbols-outlined text-primary-fixed text-5xl">rebase_edit</span>
+<h4 class="font-headline text-3xl font-bold italic tracking-tight">15-day Returns</h4>
+<p class="text-white/50 leading-relaxed">Not the perfect fit? We offer a no-questions-asked return policy within 15 days of delivery.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section (Editorial Style) -->
+<section class="py-32 bg-surface-container-low overflow-hidden">
+<div class="container mx-auto px-8 relative">
+<h2 class="font-headline font-bold text-[8vw] leading-none text-white/5 absolute -top-12 left-0 pointer-events-none select-none uppercase">Verified Community</h2>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<div class="flex justify-center gap-1 mb-12">
+<span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<blockquote class="font-headline text-4xl md:text-5xl italic font-bold tracking-tight text-white mb-10 leading-tight">
+                "The packaging was as premium as the sneakers themselves. StepX is the only place I trust for my collection now."
+            </blockquote>
+<div class="flex items-center justify-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-primary-fixed/30">
+<img alt="Customer" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPkrVj3wtUNeBR30vPKNnvVeRgmS5loYj945QLqNoY5NOQgwGKM3zTexVmbAYojQ7Q0q1hcRkjzJpMZI-aVARJQVS-3DBcD3mkdEuBdMtANBRvWVVWUo5k-DnNB9uyA-Ugfnf3acPaHfFCw0T92-O7tZnz6wE8B-qCUefR0RA_SBnfQaaUmLF9Sft3p4kGtsz_sXtpvnvbHU1o-X4tXiFOmopy87T32f1Te5fbeUp8pXGSXVpeO6FafJdeepjych8ZaB-qPlA0LA"/>
+</div>
+<div class="text-left">
+<p class="font-bold text-white uppercase tracking-widest text-xs font-label">Rohan M. — Sneakerhead</p>
+<p class="text-white/30 text-xs font-label">Verified Buyer</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full glass-nav flex justify-around items-center px-6 pb-8 pt-4 z-50 shadow-[0_-4px_40px_rgba(204,255,0,0.04)]">
+<a class="flex flex-col items-center justify-center bg-[#CCFF00] text-[#161E00] rounded-full p-3 active:scale-110 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/50 p-3 hover:text-white transition-all" href="{{DATA:SCREEN:SCREEN_23}}">
+<span class="material-symbols-outlined">lock</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/50 p-3 hover:text-white transition-all" href="{{DATA:SCREEN:SCREEN_2}}">
+<span class="material-symbols-outlined">search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/50 p-3 hover:text-white transition-all" href="{{DATA:SCREEN:SCREEN_19}}">
+<span class="material-symbols-outlined">person</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full pt-32 pb-16 flex flex-col items-center text-center px-8 w-full">
+<div class="text-3xl font-black text-white mb-6 font-headline italic tracking-tighter">StepX Vault</div>
+<div class="flex flex-wrap justify-center gap-8 mb-16">
+<a class="font-label text-sm text-white/40 hover:text-white transition-colors" href="{{DATA:SCREEN:SCREEN_16}}">Privacy</a>
+<a class="font-label text-sm text-white/40 hover:text-white transition-colors" href="{{DATA:SCREEN:SCREEN_16}}">Terms</a>
+<a class="font-label text-sm text-white/40 hover:text-white transition-colors" href="{{DATA:SCREEN:SCREEN_11}}">Support</a>
+<a class="font-label text-sm text-white/40 hover:text-white transition-colors" href="#">Returns</a>
+<a class="font-label text-sm text-white/40 hover:text-white transition-colors" href="#">Contact</a>
+</div>
+<div class="text-white/20 text-xs font-label tracking-widest uppercase">
+        © 2024 StepX Vault. All Rights Reserved.
+    </div>
+</footer>
+</body></html>

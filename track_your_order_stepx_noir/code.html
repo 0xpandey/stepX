@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Track Your Order | StepX Noir</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary": "#ffffff",
+                "primary-fixed": "#c3f400",
+                "inverse-surface": "#e5e2e1",
+                "tertiary-fixed-dim": "#b6c9d8",
+                "secondary": "#b5d25e",
+                "on-error": "#690005",
+                "surface-dim": "#131313",
+                "secondary-container": "#5d7602",
+                "surface-container-lowest": "#0e0e0e",
+                "surface-bright": "#3a3939",
+                "on-surface": "#e5e2e1",
+                "surface-container-low": "#1c1b1b",
+                "error": "#ffb4ab",
+                "surface-container-high": "#2a2a2a",
+                "background": "#131313",
+                "inverse-on-surface": "#313030",
+                "error-container": "#93000a",
+                "tertiary-fixed": "#d2e5f5",
+                "surface": "#131313",
+                "primary-container": "#c3f400",
+                "on-secondary": "#283500",
+                "on-secondary-container": "#defd83",
+                "on-primary": "#283500",
+                "on-secondary-fixed-variant": "#3c4d00",
+                "tertiary": "#ffffff",
+                "outline-variant": "#444933",
+                "on-secondary-fixed": "#161e00",
+                "on-primary-fixed": "#161e00",
+                "on-background": "#e5e2e1",
+                "on-tertiary-fixed": "#0b1d29",
+                "outline": "#8e9379",
+                "inverse-primary": "#506600",
+                "on-tertiary": "#21323e",
+                "secondary-fixed": "#d0ef77",
+                "surface-tint": "#abd600",
+                "primary-fixed-dim": "#abd600",
+                "on-primary-container": "#556d00",
+                "tertiary-container": "#d2e5f5",
+                "on-tertiary-container": "#556774",
+                "on-surface-variant": "#c4c9ac",
+                "on-error-container": "#ffdad6",
+                "surface-container-highest": "#353534",
+                "secondary-fixed-dim": "#b5d25e",
+                "surface-variant": "#353534",
+                "on-tertiary-fixed-variant": "#374956",
+                "surface-container": "#201f1f",
+                "on-primary-fixed-variant": "#3c4d00"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Space Grotesk"],
+                "body": ["Manrope"],
+                "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #131313; color: #e5e2e1; }
+        .font-grotesk { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131313]/60 backdrop-blur-xl shadow-[0_0_40px_rgba(204,255,0,0.04)]">
+<nav class="flex justify-between items-center px-8 py-6 w-full max-w-none">
+<div class="text-2xl font-black tracking-tighter text-white hover:text-[#CCFF00] transition-colors font-grotesk uppercase">
+                StepX Noir
+            </div>
+<!-- Desktop Links -->
+<div class="hidden md:flex space-x-12 items-center">
+<a class="text-white/70 hover:text-white transition-colors font-grotesk tracking-tighter uppercase font-bold" href="#">The Vault</a>
+<a class="text-white/70 hover:text-white transition-colors font-grotesk tracking-tighter uppercase font-bold" href="#">Drops</a>
+<a class="text-white/70 hover:text-white transition-colors font-grotesk tracking-tighter uppercase font-bold" href="#">Curation</a>
+</div>
+<div class="flex items-center space-x-6 text-[#CCFF00]">
+<button class="hover:bg-white/5 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="hover:bg-white/5 transition-all duration-300 p-2 rounded-full scale-95 active:scale-90">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</nav>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-20">
+<!-- Tracking Search Section -->
+<section class="px-8 max-w-7xl mx-auto mb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-end">
+<div class="lg:col-span-7">
+<h1 class="font-headline text-7xl md:text-8xl font-black tracking-tighter uppercase mb-8 leading-[0.9]">
+                        Track Your <span class="text-primary-fixed">Grail.</span>
+</h1>
+<p class="text-on-surface-variant text-xl max-w-xl leading-relaxed">
+                        Real-time verification and shipping status for your authenticated StepX acquisition. Enter your credentials to unlock the location.
+                    </p>
+</div>
+<div class="lg:col-span-5 bg-surface-container-low p-10 rounded-xl">
+<form class="space-y-6">
+<div class="space-y-1">
+<label class="font-label text-[10px] uppercase tracking-widest font-bold text-white/40">Order Identification</label>
+<input class="w-full bg-surface-container-highest border-none border-b-2 border-transparent focus:border-primary-fixed focus:ring-0 text-white py-4 px-0 placeholder:text-white/10 transition-all font-headline font-bold text-xl" placeholder="SX-9948271" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label text-[10px] uppercase tracking-widest font-bold text-white/40">Email Address</label>
+<input class="w-full bg-surface-container-highest border-none border-b-2 border-transparent focus:border-primary-fixed focus:ring-0 text-white py-4 px-0 placeholder:text-white/10 transition-all font-headline font-bold text-xl" placeholder="CULTURE@STEPX.COM" type="email"/>
+</div>
+<button class="w-full bg-primary-fixed text-on-primary-fixed py-6 rounded-md font-headline font-black uppercase tracking-tighter hover:bg-primary-fixed-dim transition-colors scale-95 active:scale-90 transition-transform">
+                            Retrieve Status
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Tracking Results (Conditional/Placeholder View) -->
+<section class="px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Status Timeline Bento -->
+<div class="lg:col-span-8 space-y-8">
+<div class="bg-surface-container-low p-12 rounded-xl">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
+<div>
+<h2 class="font-headline text-3xl font-bold tracking-tighter uppercase">Status: <span class="text-primary-fixed">In Transit</span></h2>
+<p class="text-on-surface-variant font-label uppercase tracking-widest text-xs mt-2">Estimated Arrival: Oct 24, 2024</p>
+</div>
+<div class="bg-surface-container-high px-6 py-3 rounded-full flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="local_shipping">local_shipping</span>
+<span class="font-headline font-bold text-sm tracking-tight">DHL EXPRESS: #7749201944</span>
+</div>
+</div>
+<!-- Visual Progress Bar -->
+<div class="relative pt-12 pb-8">
+<!-- Progress Line -->
+<div class="absolute top-[52px] left-0 w-full h-[2px] bg-white/10"></div>
+<div class="absolute top-[52px] left-0 w-[66%] h-[2px] bg-primary-fixed shadow-[0_0_15px_rgba(195,244,0,0.5)]"></div>
+<!-- Steps -->
+<div class="relative flex justify-between">
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed z-10 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-sm" data-icon="check" data-weight="fill">check</span>
+</div>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold text-white">Confirmed</span>
+</div>
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed z-10 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-sm" data-icon="check" data-weight="fill">check</span>
+</div>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold text-white">Processing</span>
+</div>
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed z-10 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-sm" data-icon="conveyor_belt">conveyor_belt</span>
+</div>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold text-white">Shipped</span>
+</div>
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border-2 border-white/10 flex items-center justify-center text-white/20 z-10">
+<span class="material-symbols-outlined text-sm" data-icon="package_2">package_2</span>
+</div>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold text-white/20">Delivered</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Activity List (No Dividers - Tonal Shift) -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<div class="p-8 border-b border-white/5 bg-surface-container-high">
+<h3 class="font-headline font-bold uppercase tracking-tighter">Route Log</h3>
+</div>
+<div class="p-8 space-y-8">
+<div class="flex justify-between items-start">
+<div class="flex gap-6">
+<div class="text-primary-fixed font-headline font-black text-xs pt-1">09:42</div>
+<div>
+<p class="font-bold text-white">Arrived at Sort Facility</p>
+<p class="text-on-surface-variant text-sm font-label">Leipzig, Germany</p>
+</div>
+</div>
+<div class="text-white/20 text-[10px] font-label uppercase tracking-widest">Oct 21</div>
+</div>
+<div class="flex justify-between items-start bg-white/5 p-4 rounded-lg">
+<div class="flex gap-6">
+<div class="text-primary-fixed font-headline font-black text-xs pt-1">04:15</div>
+<div>
+<p class="font-bold text-white">Departed Origin Facility</p>
+<p class="text-on-surface-variant text-sm font-label">Tokyo, JP</p>
+</div>
+</div>
+<div class="text-white/20 text-[10px] font-label uppercase tracking-widest">Oct 21</div>
+</div>
+<div class="flex justify-between items-start">
+<div class="flex gap-6">
+<div class="text-primary-fixed font-headline font-black text-xs pt-1">18:30</div>
+<div>
+<p class="font-bold text-white">Authentication Verified</p>
+<p class="text-on-surface-variant text-sm font-label">StepX Vault #04</p>
+</div>
+</div>
+<div class="text-white/20 text-[10px] font-label uppercase tracking-widest">Oct 20</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Order Sidebar Bento -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Item Card -->
+<div class="bg-surface-container-high p-8 rounded-xl">
+<div class="aspect-square bg-surface-container-lowest rounded-lg mb-6 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up profile of a premium limited edition sneaker with neon accents in a dark studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr7mFm8KrmGFPaLvJveu1vVtQVCfUP45gSw3pe2Hl6A_itYxCIRzp3OKK4yrkeXJszk_dV36z0JedQgYGZ8jc2FWhebltWm8UWefiQmh-Co-6PWaBG68M-B7uuCnHJUQd1ZBKzKJlS0-KPsF4t1FulLqBYGf5ej2Cl5h4yBFPdj86W-4tfJ1dMsZLWCCLP87wSZTwLxxuPI098Iu_nJbHkFpJYMT8kxvaBoiS8Taib09Hp1nputekNWzy5fWVxE_n-aY6Tzfdw-Q"/>
+</div>
+<h4 class="font-headline font-black text-2xl uppercase tracking-tighter leading-none mb-2">Air Max 1 'Noir Edition'</h4>
+<p class="font-label text-xs uppercase tracking-widest text-primary-fixed mb-6">Size: US 10.5 / EU 44</p>
+<div class="flex justify-between border-t border-white/10 pt-6">
+<span class="text-white/40 uppercase text-[10px] font-bold tracking-widest">Transaction</span>
+<span class="font-headline font-bold">$1,240.00</span>
+</div>
+</div>
+<!-- Shipping Address -->
+<div class="bg-surface-container-low p-8 rounded-xl">
+<h4 class="font-headline font-bold uppercase tracking-tighter mb-4 text-white/40 text-xs">Delivery Destination</h4>
+<p class="font-headline font-bold text-lg mb-1">Julian Thorne</p>
+<p class="text-on-surface-variant text-sm leading-relaxed font-label">
+                            224 Baker Street, Suite 402<br/>
+                            Marylebone, London NW1 6XE<br/>
+                            United Kingdom
+                        </p>
+<div class="mt-8 flex items-center gap-4 p-4 bg-white/5 rounded-lg border border-white/5">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="verified_user">verified_user</span>
+<span class="text-[10px] font-label uppercase tracking-widest font-bold">Secure Delivery Enabled</span>
+</div>
+</div>
+<!-- Map Placeholder / Mini Map -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden h-48 relative">
+<img class="w-full h-full object-cover opacity-50" data-alt="Abstract dark map view with neon green glowing route lines on a black background" data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeTofj1pCoP1mPE_ap4E2eiIlQvpBoSWh4KWXL4cKUwB99bHmFcYbNeUGmrvv9GIAPVTC1jYVc58R9etPvoZ292cAo0a8zjlDixI4x4Dql6uQ-apjxSlTvoi_8vUl3BKBdKf8tMSgkmy65DsES0J-KzzrWIYZ7VZ0n0ovKoT7vpdXg5y5f24jWwVJPqPMej1c3HbnG8QrajBgDv-d9Z2Ev3oxxriXb1TbG5OlrMHxYUHZq-P5oBlO_lDRLSWBGDMiu_DUDWeSFsw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#1C1B1B] to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex items-center gap-2">
+<div class="w-3 h-3 bg-primary-fixed rounded-full animate-pulse shadow-[0_0_10px_#CCFF00]"></div>
+<span class="text-[10px] font-label uppercase tracking-widest font-black text-white">Current Node: London Gateway</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Mobile BottomNavBar (md:hidden) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-4 bg-[#1C1B1B]/80 backdrop-blur-2xl rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.5)] z-50">
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold mt-1">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold mt-1">Drops</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="lock_open">lock_open</span>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold mt-1">Vault</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#CCFF00] bg-[#CCFF00]/10 rounded-xl px-6 py-2 active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold mt-1">Profile</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-20 px-8 mt-32 bg-[#0E0E0E] border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-start w-full max-w-7xl mx-auto">
+<div class="mb-12 md:mb-0">
+<div class="font-grotesk font-black text-[#CCFF00] text-3xl mb-8 uppercase">StepX Noir</div>
+<p class="font-label text-sm tracking-normal text-white/50 max-w-xs">
+                    The premium destination for the rarest footware. Every drop is authenticated. Every step is culture.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+<div class="flex flex-col space-y-4">
+<span class="text-white font-bold uppercase text-xs tracking-widest mb-4">Ecosystem</span>
+<a class="text-white/40 hover:text-[#CCFF00] transition-transform duration-300 hover:translate-x-1 text-sm font-label" href="#">Membership</a>
+<a class="text-white/40 hover:text-[#CCFF00] transition-transform duration-300 hover:translate-x-1 text-sm font-label" href="#">Authentication</a>
+<a class="text-white/40 hover:text-[#CCFF00] transition-transform duration-300 hover:translate-x-1 text-sm font-label" href="#">Drops</a>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="text-white font-bold uppercase text-xs tracking-widest mb-4">Support</span>
+<a class="text-white/40 hover:text-[#CCFF00] transition-transform duration-300 hover:translate-x-1 text-sm font-label" href="#">Returns</a>
+<a class="text-white/40 hover:text-[#CCFF00] transition-transform duration-300 hover:translate-x-1 text-sm font-label" href="#">Privacy</a>
+<a class="text-white/40 hover:text-[#CCFF00] transition-transform duration-300 hover:translate-x-1 text-sm font-label" href="#">Terms</a>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="text-white font-bold uppercase text-xs tracking-widest mb-4">Social</span>
+<a class="text-white/40 hover:text-[#CCFF00] transition-transform duration-300 hover:translate-x-1 text-sm font-label" href="#">Instagram</a>
+<a class="text-white/40 hover:text-[#CCFF00] transition-transform duration-300 hover:translate-x-1 text-sm font-label" href="#">Twitter</a>
+<a class="text-white/40 hover:text-[#CCFF00] transition-transform duration-300 hover:translate-x-1 text-sm font-label" href="#">Discord</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label text-sm tracking-normal text-white/50">© 2024 StepX Noir. Engineered for the Culture.</p>
+<div class="flex gap-8">
+<span class="material-symbols-outlined text-white/20 text-xl" data-icon="shield">shield</span>
+<span class="material-symbols-outlined text-white/20 text-xl" data-icon="lock">lock</span>
+<span class="material-symbols-outlined text-white/20 text-xl" data-icon="fingerprint">fingerprint</span>
+</div>
+</div>
+</footer>
+</body></html>

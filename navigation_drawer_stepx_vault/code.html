@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StepX Noir - Sneaker Vault Navigation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#3a3939",
+                    "on-tertiary-fixed-variant": "#374956",
+                    "on-error-container": "#ffdad6",
+                    "inverse-primary": "#506600",
+                    "on-error": "#690005",
+                    "error-container": "#93000a",
+                    "primary-container": "#c3f400",
+                    "on-primary-fixed": "#161e00",
+                    "on-primary-fixed-variant": "#3c4d00",
+                    "on-background": "#e5e2e1",
+                    "tertiary": "#ffffff",
+                    "error": "#ffb4ab",
+                    "surface-container-high": "#2a2a2a",
+                    "inverse-surface": "#e5e2e1",
+                    "on-tertiary": "#21323e",
+                    "background": "#131313",
+                    "outline": "#8e9379",
+                    "on-tertiary-fixed": "#0b1d29",
+                    "surface-container": "#201f1f",
+                    "secondary-container": "#5d7602",
+                    "surface-container-low": "#1c1b1b",
+                    "secondary": "#b5d25e",
+                    "on-surface-variant": "#c4c9ac",
+                    "primary-fixed-dim": "#abd600",
+                    "on-tertiary-container": "#556774",
+                    "on-secondary-fixed-variant": "#3c4d00",
+                    "surface": "#131313",
+                    "primary-fixed": "#c3f400",
+                    "tertiary-fixed-dim": "#b6c9d8",
+                    "surface-tint": "#abd600",
+                    "secondary-fixed-dim": "#b5d25e",
+                    "on-primary": "#283500",
+                    "surface-variant": "#353534",
+                    "on-secondary-fixed": "#161e00",
+                    "on-primary-container": "#556d00",
+                    "on-secondary-container": "#defd83",
+                    "outline-variant": "#444933",
+                    "surface-container-lowest": "#0e0e0e",
+                    "secondary-fixed": "#d0ef77",
+                    "inverse-on-surface": "#313030",
+                    "primary": "#ffffff",
+                    "on-surface": "#e5e2e1",
+                    "on-secondary": "#283500",
+                    "tertiary-fixed": "#d2e5f5",
+                    "tertiary-container": "#d2e5f5",
+                    "surface-container-highest": "#353534",
+                    "surface-dim": "#131313"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": [
+                            "Space Grotesk"
+                    ],
+                    "body": [
+                            "Manrope"
+                    ],
+                    "label": [
+                            "Manrope"
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .vault-gradient {
+            background: linear-gradient(135deg, #c3f400 0%, #abd600 100%);
+        }
+        body {
+            background-color: #0e0e0e;
+            color: #e5e2e1;
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="overflow-hidden">
+<!-- Top Navigation Bar (Required Anchor) -->
+<header class="bg-[#131313] dark:bg-[#131313] text-[#CCFF00] flex justify-between items-center px-6 py-4 w-full fixed top-0 z-[70] font-['Space_Grotesk'] tracking-tight">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-2xl cursor-pointer">menu</span>
+<span class="text-2xl font-bold tracking-tighter text-[#CCFF00]">STEPX</span>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-2xl cursor-pointer">shopping_bag</span>
+</div>
+</header>
+<!-- Navigation Drawer Overlay -->
+<div class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[55]"></div>
+<!-- Navigation Drawer Component -->
+<nav class="bg-[#0E0E0E] dark:bg-[#0E0E0E] fixed inset-y-0 left-0 z-[60] flex flex-col p-8 gap-6 h-full w-full max-w-sm rounded-r-none shadow-[0px_0px_40px_rgba(204,255,0,0.04)] font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm overflow-y-auto">
+<!-- Profile Header -->
+<div class="flex items-center gap-4 mb-8 mt-12">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center overflow-hidden border border-outline-variant/20">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="Close up portrait of a stylish man in futuristic street wear with subtle neon reflections on his face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrKh8DhfygcG8_wA3WJkyxv6dmxIBZVpuVb-1An-Srb0BsY3wxWjMdI1HDvqffWVw_hKOsRRtQtQSVznsYRA8CwswmkS5ulhOne2vUDtxVIPAs_OcUurI7sASKUGsAaHyIpg0dFJ-Tse3Y7pGvvUBTKU8sPZDUpNo9gfG95LlTquEDpMkFWUHWD9B2gIVS72kHu0qb72wzgEUAbVoQGC1J2QUEuVKJLQCZ_O1nXmxtBYr-PiUn5JTzKhuHzZYNMhjmdGQeK5Z86A"/>
+</div>
+<div class="flex flex-col">
+<span class="text-[#CCFF00] font-black text-lg tracking-normal">VAULT MEMBER</span>
+<span class="text-white/50 text-xs lowercase font-['Manrope'] tracking-normal">collector_01@stepx.com</span>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex flex-col gap-2">
+<!-- Active Item: Home -->
+<a class="bg-[#CCFF00] text-[#161E00] font-bold rounded-md px-4 py-3 flex items-center gap-4 transition-all translate-x-1 duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span>Home</span>
+</a>
+<a class="text-white/70 hover:text-white px-4 py-3 flex items-center gap-4 hover:bg-[#1C1B1B] transition-all" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span>Shop</span>
+</a>
+<a class="text-white/70 hover:text-white px-4 py-3 flex items-center gap-4 hover:bg-[#1C1B1B] transition-all" href="#">
+<span class="material-symbols-outlined">new_releases</span>
+<span>New Arrivals</span>
+</a>
+<a class="text-white/70 hover:text-white px-4 py-3 flex items-center gap-4 hover:bg-[#1C1B1B] transition-all" href="#">
+<span class="material-symbols-outlined">auto_awesome_motion</span>
+<span>Collections</span>
+</a>
+<div class="h-px bg-outline-variant/10 my-4"></div>
+<a class="text-white/70 hover:text-white px-4 py-3 flex items-center gap-4 hover:bg-[#1C1B1B] transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span>Profile</span>
+</a>
+<a class="text-white/70 hover:text-white px-4 py-3 flex items-center gap-4 hover:bg-[#1C1B1B] transition-all" href="#">
+<span class="material-symbols-outlined">package_2</span>
+<span>Orders</span>
+</a>
+<a class="text-white/70 hover:text-white px-4 py-3 flex items-center gap-4 hover:bg-[#1C1B1B] transition-all" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span>Wishlist</span>
+</a>
+</div>
+<!-- Footer Actions -->
+<div class="mt-auto pt-8">
+<div class="bg-surface-container-low rounded-xl p-6 relative overflow-hidden group border border-outline-variant/10">
+<div class="relative z-10">
+<h4 class="text-white font-bold mb-1">PRO MEMBERSHIP</h4>
+<p class="text-white/40 text-[10px] normal-case font-['Manrope'] mb-4">Unlock exclusive drops and free shipping on all vault orders.</p>
+<button class="vault-gradient text-[#161E00] px-4 py-2 rounded-lg text-xs font-bold w-full">UPGRADE NOW</button>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas (Blurred Background Content) -->
+<main class="min-h-screen pt-24 px-6 relative z-10">
+<div class="max-w-7xl mx-auto">
+<section class="mb-16">
+<div class="flex flex-col gap-2">
+<span class="text-[#CCFF00] font-['Space_Grotesk'] text-sm tracking-[0.2em] uppercase">The Noir Edition</span>
+<h1 class="font-['Space_Grotesk'] text-7xl font-bold tracking-tighter leading-none mb-8">CURATED<br/>VELOCITY</h1>
+</div>
+<!-- Featured Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 aspect-[16/9] bg-surface-container-low rounded-xl relative overflow-hidden group">
+<img alt="Luxury Sneaker" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Professional studio shot of a high-end black and white sneaker suspended in mid-air with dramatic moody lighting and soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrX6eUdPrtkJJZReKTiuNUbf5Jda4hLIC8ckKO8kB6xzSSOVaOdB2XL6qFDAin1VTE5WDHsq53atBrgfCUPgk2Pj-ekqYMMYlp57cXd8MYdf-1wr4bhs_Oh34KLvJtmgz4sw--O_qtT3uThDiLkJ4Gcku-RuqdIPOf3UU_9foR7HmemHLvFs8pjAjAXA2ze4MRzPHmOWHGB3CWrXxDUq9rQ-WJR5BCr3C2PAV_HVlIARSiEC7WJO79Va5Btj1SqscjACz1GI1CVw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0E0E0E] to-transparent opacity-60"></div>
+<div class="absolute bottom-8 left-8">
+<span class="bg-[#CCFF00] text-[#161E00] text-[10px] font-black px-2 py-1 rounded mb-2 inline-block">LIMITED DROP</span>
+<h3 class="text-2xl font-bold font-['Space_Grotesk']">APEX PREDATOR V2</h3>
+</div>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-xl flex flex-col items-center justify-center p-8 text-center border border-outline-variant/10">
+<span class="material-symbols-outlined text-5xl text-[#CCFF00] mb-4">verified</span>
+<h4 class="font-bold text-xl mb-2">100% AUTHENTIC</h4>
+<p class="text-white/50 text-sm font-['Manrope']">Every item in our vault is verified by experts.</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Mobile Visibility Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 pb-safe bg-[#1C1B1B]/60 backdrop-blur-xl md:hidden">
+<a class="text-[#CCFF00] scale-110 flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Manrope'] text-[10px] uppercase">Home</span>
+</a>
+<a class="text-white/40 flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-['Manrope'] text-[10px] uppercase">Explore</span>
+</a>
+<a class="text-white/40 flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-['Manrope'] text-[10px] uppercase">Saved</span>
+</a>
+<a class="text-white/40 flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] text-[10px] uppercase">Vault</span>
+</a>
+</nav>
+</body></html>

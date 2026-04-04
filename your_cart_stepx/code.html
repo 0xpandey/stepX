@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StepX Vault | Shopping Cart</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#131313",
+                    "primary-fixed-dim": "#abd600",
+                    "inverse-surface": "#e5e2e1",
+                    "tertiary-fixed-dim": "#b6c9d8",
+                    "on-tertiary": "#21323e",
+                    "on-surface": "#e5e2e1",
+                    "on-primary-container": "#556d00",
+                    "on-tertiary-fixed-variant": "#374956",
+                    "surface-container-high": "#2a2a2a",
+                    "inverse-on-surface": "#313030",
+                    "primary": "#ffffff",
+                    "on-tertiary-container": "#556774",
+                    "on-error": "#690005",
+                    "tertiary-container": "#d2e5f5",
+                    "surface-container-highest": "#353534",
+                    "on-background": "#e5e2e1",
+                    "primary-container": "#c3f400",
+                    "surface-variant": "#353534",
+                    "secondary-fixed": "#d0ef77",
+                    "on-surface-variant": "#c4c9ac",
+                    "on-secondary-fixed": "#161e00",
+                    "surface-container": "#201f1f",
+                    "on-secondary": "#283500",
+                    "primary-fixed": "#c3f400",
+                    "surface-bright": "#3a3939",
+                    "secondary": "#b5d25e",
+                    "surface-container-lowest": "#0e0e0e",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed": "#161e00",
+                    "background": "#131313",
+                    "outline": "#8e9379",
+                    "surface-container-low": "#1c1b1b",
+                    "surface": "#131313",
+                    "secondary-fixed-dim": "#b5d25e",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#3c4d00",
+                    "on-primary": "#283500",
+                    "tertiary-fixed": "#d2e5f5",
+                    "outline-variant": "#444933",
+                    "secondary-container": "#5d7602",
+                    "inverse-primary": "#506600",
+                    "surface-tint": "#abd600",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#3c4d00",
+                    "on-secondary-container": "#defd83",
+                    "tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#0b1d29"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #131313; color: #e5e2e1; font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .neon-glow-btn:hover { box-shadow: 0 0 20px rgba(195, 244, 0, 0.4); }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/60 backdrop-blur-xl flex justify-between items-center px-8 py-4 w-full max-w-none">
+<div class="text-2xl font-black italic text-[#CCFF00] tracking-tighter font-['Space_Grotesk']">StepX</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-white/70 font-['Space_Grotesk'] font-bold tracking-tighter hover:text-[#CCFF00] transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">Home</a>
+<a class="text-white/70 font-['Space_Grotesk'] font-bold tracking-tighter hover:text-[#CCFF00] transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">Shop</a>
+</div>
+<div class="flex items-center space-x-6 text-[#CCFF00]">
+<button class="material-symbols-outlined scale-95 active:scale-90 transition-transform" data-icon="search">search</button>
+<button class="material-symbols-outlined scale-95 active:scale-90 transition-transform relative" data-icon="shopping_cart">
+                shopping_cart
+                <span class="absolute -top-1 -right-1 bg-primary-fixed text-on-primary-fixed text-[10px] w-4 h-4 flex items-center justify-center rounded-full font-bold">2</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-32 px-8 max-w-7xl mx-auto min-h-screen">
+<header class="mb-16">
+<h1 class="font-headline text-5xl font-bold tracking-tighter text-on-surface mb-2">YOUR VAULT</h1>
+<p class="font-body text-on-surface-variant/60 uppercase tracking-widest text-xs">2 Items Selected for Curated Delivery</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Cart Items List -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Item 1 -->
+<div class="group flex flex-col md:flex-row gap-8 bg-surface-container-low p-6 rounded-lg transition-all duration-300">
+<div class="w-full md:w-48 h-48 bg-surface-container-high rounded overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Close-up profile of a premium neon green and charcoal grey performance sneaker against a dark obsidian background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo8JZnfIaTVuR43tisgXp-UgveMlCp1XhW-DbgCi3xuFAicgVeLZ0Gu6G_cFWOJUmCeN2AthcM8YAbmcymoOWM79aLNToRd2uqFxXZU_eTU166VXkzB-dcsCBtmnIPMUTW5a7fZIJM-48JMrTLDKPV56YO-6mRyLoBwzYZBHpgGKHHoTH6oVROBifardzBBdusS3i9scACta2CuDAazV15gV50_0trd512NVRlO0lR0R9GxGWWEhdpY2dyRqTEJ1Nz0Dq3v1N4AA"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-2">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold text-white tracking-tight mb-1">Quantum Flux 360</h3>
+<p class="font-label text-on-surface-variant uppercase text-[10px] tracking-widest">EDITION: MIDNIGHT NEON</p>
+</div>
+<button class="text-on-surface-variant/40 hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+<div class="flex flex-wrap items-end justify-between gap-4 mt-8">
+<div class="flex items-center gap-8">
+<div class="flex flex-col gap-1">
+<span class="font-label text-[10px] text-on-surface-variant/50 uppercase tracking-widest">Size</span>
+<span class="font-headline font-bold text-lg">US 10.5</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label text-[10px] text-on-surface-variant/50 uppercase tracking-widest">Quantity</span>
+<div class="flex items-center bg-surface-container-highest rounded-full px-3 py-1 mt-1 border border-outline-variant/10">
+<button class="text-on-surface hover:text-primary-fixed"><span class="material-symbols-outlined text-sm" data-icon="remove">remove</span></button>
+<span class="mx-4 font-headline font-bold">1</span>
+<button class="text-on-surface hover:text-primary-fixed"><span class="material-symbols-outlined text-sm" data-icon="add">add</span></button>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline text-2xl font-bold text-primary-fixed tracking-tight">₹8,499</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group flex flex-col md:flex-row gap-8 bg-surface-container-low p-6 rounded-lg transition-all duration-300">
+<div class="w-full md:w-48 h-48 bg-surface-container-high rounded overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Sleek white and platinum minimalist high-top sneaker on a textured dark graphite surface with soft rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcnuDnxJL343GDXeODsbaT6f5BfYQKzxmH5baEFzUwS3-TtRpRn5Lqx4lT3o4d5CEiinSwdG2TNV4jn60qrjXSsxx-WEzVM9b5TNAWDmNKqfyXs6V8rScRAmbohIv6VIvYY6uaWIXWEYjecStK7frlz_ajv3DFkLPCAgEygfK3nDpOWF6rCK0Vf7KG5XiDNG6JjcvUsvWLL8UxqyzhLHyJhpubnK1O_Q_z6OYhEJzer87_xDlga48pIgB7wYp5bWCzaQx9EYFSdQ"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-2">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold text-white tracking-tight mb-1">Aerostep Ghost</h3>
+<p class="font-label text-on-surface-variant uppercase text-[10px] tracking-widest">EDITION: PLATINUM WHITE</p>
+</div>
+<button class="text-on-surface-variant/40 hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+<div class="flex flex-wrap items-end justify-between gap-4 mt-8">
+<div class="flex items-center gap-8">
+<div class="flex flex-col gap-1">
+<span class="font-label text-[10px] text-on-surface-variant/50 uppercase tracking-widest">Size</span>
+<span class="font-headline font-bold text-lg">US 9.0</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label text-[10px] text-on-surface-variant/50 uppercase tracking-widest">Quantity</span>
+<div class="flex items-center bg-surface-container-highest rounded-full px-3 py-1 mt-1 border border-outline-variant/10">
+<button class="text-on-surface hover:text-primary-fixed"><span class="material-symbols-outlined text-sm" data-icon="remove">remove</span></button>
+<span class="mx-4 font-headline font-bold">1</span>
+<button class="text-on-surface hover:text-primary-fixed"><span class="material-symbols-outlined text-sm" data-icon="add">add</span></button>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline text-2xl font-bold text-primary-fixed tracking-tight">₹6,500</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Summary -->
+<aside class="lg:col-span-4 lg:sticky lg:top-32">
+<div class="bg-surface-container-high p-8 rounded-lg">
+<h2 class="font-headline text-xl font-bold mb-8 uppercase tracking-widest">Order Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between font-body text-on-surface-variant">
+<span>Subtotal</span>
+<span class="text-white">₹14,999</span>
+</div>
+<div class="flex justify-between font-body text-on-surface-variant">
+<span>Shipping</span>
+<span class="text-primary-fixed-dim uppercase text-sm font-bold tracking-widest">Free</span>
+</div>
+<div class="flex justify-between font-body text-on-surface-variant">
+<span>Estimated Tax</span>
+<span class="text-white">Calculated at next step</span>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant/20 mb-8">
+<div class="flex justify-between items-baseline">
+<span class="font-headline text-sm font-bold uppercase tracking-widest">Total Amount</span>
+<span class="font-headline text-4xl font-bold text-primary-fixed tracking-tighter">₹14,999</span>
+</div>
+</div>
+<button class="w-full bg-primary-fixed text-on-primary-fixed font-headline font-bold py-5 rounded-md neon-glow-btn transition-all duration-300 scale-100 active:scale-95 mb-6">
+                        PROCEED TO CHECKOUT
+                    </button>
+<div class="pt-8 border-t border-outline-variant/10">
+<div class="flex flex-col items-center gap-4 opacity-40">
+<span class="font-label text-[10px] uppercase tracking-widest">Guaranteed Safe Checkout</span>
+<div class="flex justify-center gap-6">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+<span class="material-symbols-outlined" data-icon="credit_card">credit_card</span>
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0E0E0E] w-full pt-32 pb-16 flex flex-col items-center text-center px-8 w-full">
+<div class="text-3xl font-black text-white mb-6 font-headline">StepX Vault</div>
+<div class="flex flex-wrap justify-center gap-8 mb-12">
+<a class="font-['Manrope'] text-sm leading-relaxed text-white/40 hover:text-white transition-colors" href="#">Privacy</a>
+<a class="font-['Manrope'] text-sm leading-relaxed text-white/40 hover:text-white transition-colors" href="#">Terms</a>
+<a class="font-['Manrope'] text-sm leading-relaxed text-white/40 hover:text-white transition-colors" href="#">Returns</a>
+<a class="font-['Manrope'] text-sm leading-relaxed text-white/40 hover:text-white transition-colors" href="#">Contact</a>
+</div>
+<p class="font-['Manrope'] text-sm leading-relaxed text-white/40">© 2024 StepX Vault. All Rights Reserved.</p>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-8 pt-4 bg-[#1C1B1B]/80 backdrop-blur-2xl z-50 shadow-[0_-4px_40px_rgba(204,255,0,0.04)]">
+<button class="flex flex-col items-center justify-center text-white/50 p-3 hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Manrope'] uppercase text-[10px] tracking-widest mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-white/50 p-3 hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-['Manrope'] uppercase text-[10px] tracking-widest mt-1">Shop</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-[#CCFF00] text-[#161E00] rounded-full p-3 scale-110 duration-200">
+<span class="material-symbols-outlined" data-icon="shopping_cart" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+</button>
+<button class="flex flex-col items-center justify-center text-white/50 p-3 hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Manrope'] uppercase text-[10px] tracking-widest mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

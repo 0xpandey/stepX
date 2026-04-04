@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#313030",
+                        "primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#374956",
+                        "surface-container-high": "#2a2a2a",
+                        "tertiary-fixed-dim": "#b6c9d8",
+                        "on-tertiary": "#21323e",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-container": "#556d00",
+                        "surface-dim": "#131313",
+                        "primary-fixed-dim": "#abd600",
+                        "inverse-surface": "#e5e2e1",
+                        "on-error": "#690005",
+                        "tertiary-container": "#d2e5f5",
+                        "on-tertiary-container": "#556774",
+                        "surface-container-highest": "#353534",
+                        "surface-container": "#201f1f",
+                        "on-secondary-fixed": "#161e00",
+                        "surface-variant": "#353534",
+                        "secondary-fixed": "#d0ef77",
+                        "on-surface-variant": "#c4c9ac",
+                        "primary-container": "#c3f400",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed": "#c3f400",
+                        "surface-bright": "#3a3939",
+                        "on-secondary": "#283500",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#161e00",
+                        "error": "#ffb4ab",
+                        "background": "#131313",
+                        "surface-container-low": "#1c1b1b",
+                        "surface": "#131313",
+                        "secondary-fixed-dim": "#b5d25e",
+                        "outline": "#8e9379",
+                        "secondary": "#b5d25e",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-container": "#5d7602",
+                        "inverse-primary": "#506600",
+                        "surface-tint": "#abd600",
+                        "error-container": "#93000a",
+                        "outline-variant": "#444933",
+                        "tertiary-fixed": "#d2e5f5",
+                        "on-primary": "#283500",
+                        "on-tertiary-fixed": "#0b1d29",
+                        "tertiary": "#ffffff",
+                        "on-secondary-container": "#defd83",
+                        "on-secondary-fixed-variant": "#3c4d00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-nav {
+            background: rgba(19, 19, 19, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #c3f400 0%, #abd600 100%);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(195, 244, 0, 0.4);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 glass-nav flex justify-between items-center px-8 h-20 w-full max-w-none">
+<div class="text-2xl font-bold tracking-tighter text-white font-headline">StepX Noir</div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="font-headline tracking-tight uppercase text-glow text-[#CCFF00] border-b-2 border-[#CCFF00] pb-1 transition-colors duration-300" href="#">Drops</a>
+<a class="font-headline tracking-tight uppercase text-white/70 hover:text-[#CCFF00] transition-colors duration-300" href="#">Vault</a>
+<a class="font-headline tracking-tight uppercase text-white/70 hover:text-[#CCFF00] transition-colors duration-300" href="#">Editorial</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-white/70 hover:text-[#CCFF00] transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high border border-outline-variant/20">
+<img alt="User profile avatar" data-alt="Close-up portrait of a stylish person with modern aesthetic against a dark urban background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA10kGn2A-TZ_xXB5JcrFn1w3zkuLTgMIRMdRvalvVTIAiZTCOSUWZTxeYiOKUJ6x2jOsIHfMKHz3DGWXORKCHuNG-hljPvGMT-rxDLFfq-W6zWNLbeq8wCCHY_5P3hCz-k60eDYNL_Wy8iPE0QHePMd9y2SuHC8UsFB1uMjnWD1r6jOpfvZWOkv5CaNsZiXhopTYjBMY0i5WbwBrbWaWWZjvBp72yTdJcS8wdoOMHusA_ewKP0cqUlev4Iru9vWYHn8I3VA3EXug"/>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-7xl mx-auto">
+<!-- Hero: Live Now Drop -->
+<section class="mb-32">
+<div class="flex flex-col md:flex-row items-end gap-8 mb-12">
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter uppercase leading-none">
+                    Live <span class="text-primary-fixed">Now</span>
+</h1>
+<div class="mb-4 flex items-center gap-2 px-3 py-1 bg-primary-fixed/10 border border-primary-fixed/20 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span>
+<span class="text-xs font-label uppercase tracking-widest text-primary-fixed">Vault Access Open</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0 overflow-hidden rounded-xl bg-surface-container-low">
+<div class="lg:col-span-7 relative h-[500px] overflow-hidden">
+<img alt="Premium sneaker featured" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="High-end limited edition sneaker floating in a dark studio with dramatic neon green rim lighting and smoke effects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxgKY0UCPQfeVQusOJyu39INmk0IvK1a0Kubmh5ZbMzE2np-rpv4qVh4jtpg04MtUh1aYTgG1JieFCfj_6ROewtXHCY1rp0-93Sei4HqzSlWqnebvzGY4Wqf_ItHPy1uUN9jA0V48h5gjHI44omw5tLeOxMp0UMQex0IVnjntHwBiGxqjUKl7PT-iNP3JWxJZjmYEOW8F0C1iJV-SuJZS0KHjdvdb8ooQ4YLRwQ9kOSH0X8pJFIOqyjbYgM4fFhq_sT1dlSnE2rQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="lg:col-span-5 p-12 flex flex-col justify-center">
+<span class="font-label uppercase tracking-[0.2em] text-on-surface-variant text-sm mb-4">Hyper-Limited Drop</span>
+<h2 class="font-headline text-4xl font-bold mb-6 tracking-tight">QUANTUM NEON 'NOIR'</h2>
+<p class="text-on-surface-variant body-lg mb-8 leading-relaxed">
+                        The definitive silhouette of the season. Featuring reactive carbon fibers and a dual-density neon strike sole. Only 500 pairs worldwide.
+                    </p>
+<div class="flex flex-wrap gap-4 items-center">
+<button class="kinetic-gradient text-on-primary-fixed font-headline font-bold px-8 py-4 rounded-lg flex items-center gap-3 transition-transform hover:scale-95 duration-200">
+                            PURCHASE NOW
+                            <span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<div class="text-2xl font-headline font-bold">$340.00</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Drops: Grid Layout -->
+<section class="mb-32">
+<div class="flex flex-col md:flex-row justify-between items-baseline gap-4 mb-16">
+<h2 class="font-headline text-5xl font-bold tracking-tighter uppercase">Upcoming <span class="text-white/30">Drops</span></h2>
+<div class="flex items-center gap-4">
+<span class="font-label uppercase tracking-widest text-xs text-on-surface-variant">Global Release Calendar</span>
+<div class="h-px w-24 bg-outline-variant/30"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Drop Card 1 -->
+<div class="group">
+<div class="relative aspect-[4/5] bg-surface-container-low rounded-xl mb-6 overflow-hidden flex items-center justify-center">
+<img alt="Sneaker drop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Modern high-top sneaker on a textured dark pedestal with stark white overhead lighting and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCtqZ3zNl8HSK6mpK-n--uv9yhoyCAq6TLMFC2JxIaD1OPZii6mO2e2kajQx2W-zgw1DobLWSHKN8qKqcTS_F3MIYCFjkPEa7t6EAUrxFRSf187kxMobYbiR8x99k8WtnXqJU_Lo5JQx-n77PnGCz7Bygmtb_4XLKGYhuy_a3CtmskMKUJtRVf-syO1BQfPEBKI3AuK1I2rR90J4D9wvY__wsnUuVdGWoF2p7ZFm2zaVQ6DxHkmhM4YyHunTa55jj4fZrUfNigsA"/>
+<div class="absolute top-6 left-6 flex flex-col items-start gap-2">
+<div class="px-4 py-2 bg-surface-container-highest/80 backdrop-blur-md rounded-lg">
+<div class="text-xs font-label uppercase tracking-tighter text-on-surface-variant">Drops In</div>
+<div class="font-headline font-bold text-xl tabular-nums">02:14:55</div>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-xl font-bold mb-1 group-hover:text-primary-fixed transition-colors">OBSIDIAN X-TREME</h3>
+<p class="font-label text-sm text-on-surface-variant tracking-wider uppercase">Sept 14, 10:00 AM</p>
+</div>
+<button class="p-3 border border-outline-variant/30 rounded-lg hover:bg-primary-fixed hover:text-on-primary-fixed transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+<!-- Drop Card 2 -->
+<div class="group">
+<div class="relative aspect-[4/5] bg-surface-container-low rounded-xl mb-6 overflow-hidden flex items-center justify-center">
+<img alt="Sneaker drop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Sleek white and green luxury sneaker presented in a minimal glass display case with moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPinyb97M-RsxrcZtV6IeHxtId5F8OCRYCAfL-K2FJdqDus_8HcEhDnyl4y03451Rtpkqj9YF_2SVRX9rYG-9CC7Mzm3FMdL26ajxv79RcDxfaw8LOWvRs0af06tprC_Fv-KjDZDDYSdSh59U7HJRyaEB8KmqoZ0zZZSRBWC6LwTyyXtvPdk31TCoNi3nm36YBuBJ_YEtcgntACFoTLekXT35VmTBu97qbvzptl5vp8eytysmFer7HA3Nunqpl5azKHuOD7Yx0sg"/>
+<div class="absolute top-6 left-6 flex flex-col items-start gap-2">
+<div class="px-4 py-2 bg-surface-container-highest/80 backdrop-blur-md rounded-lg">
+<div class="text-xs font-label uppercase tracking-tighter text-on-surface-variant">Drops In</div>
+<div class="font-headline font-bold text-xl tabular-nums">18:42:10</div>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-xl font-bold mb-1 group-hover:text-primary-fixed transition-colors">KINETIC FLUX 'MINT'</h3>
+<p class="font-label text-sm text-on-surface-variant tracking-wider uppercase">Sept 16, 09:00 AM</p>
+</div>
+<button class="p-3 border border-outline-variant/30 rounded-lg hover:bg-primary-fixed hover:text-on-primary-fixed transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+<!-- Drop Card 3 -->
+<div class="group">
+<div class="relative aspect-[4/5] bg-surface-container-low rounded-xl mb-6 overflow-hidden flex items-center justify-center">
+<img alt="Sneaker drop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Aggressive black sport sneaker silhouette against a dark metallic grid background with sharp light reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuk0tDJt4td_f98MqTCKsy6PcSnwwAW-8WNoH-V0LhPx3J6PtXQSaFVAngcznSvAfqvoV_qKkKMxe_-u2ECo2smzK3Rl7YvGgPdxEcUUsqfm_efGdtmwmWRfPPlbM9hAAtcFFn8iPd4AYjicokto2J-9aF6nHJ-8tjcYKkGIjqOoyPrROWldEBd9n6jsyjI0sDjM5ZRqDLoWgcjU7xspf9CxgymQEVzTzTNUsKxv781qwWnm36-JWyaLZlp_5v7l5RIjWyboZZrQ"/>
+<div class="absolute top-6 left-6 flex flex-col items-start gap-2">
+<div class="px-4 py-2 bg-surface-container-highest/80 backdrop-blur-md rounded-lg">
+<div class="text-xs font-label uppercase tracking-tighter text-on-surface-variant">Drops In</div>
+<div class="font-headline font-bold text-xl tabular-nums">42:05:30</div>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-xl font-bold mb-1 group-hover:text-primary-fixed transition-colors">NIGHTSHADE RUNNER</h3>
+<p class="font-label text-sm text-on-surface-variant tracking-wider uppercase">Sept 19, 03:00 PM</p>
+</div>
+<button class="p-3 border border-outline-variant/30 rounded-lg hover:bg-primary-fixed hover:text-on-primary-fixed transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial/Insight Section: Bento Style -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-8 h-[400px] bg-surface-container-low rounded-xl overflow-hidden relative group">
+<img alt="Editorial story" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700" data-alt="Cinematic wide shot of a futuristic sneaker design studio with screens, blueprints, and prototypes in a dark workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVMX8A8SiZzeBsy5_Cz7GO7x6WKbqIDAbmTQ68-9f01YKWvuYXJ6Apmn9_K9iBidG6ytGfFeUObPStkHlbn4SCJJoBYroJ8-Sz22hGiSNtzvNjjjlGP4ceMp3irWk_dOtgI7FMDEhRuLaPbHGEOp-qH0mgpDAnHhRMXsf5jvHTGn8zIwTaj5miV344dpdiFfn6XATe1E75ccr5xAjGXSXPcw8ILeHVUz6Xm3tWTZIhvPMN6KritqEzhQfueSE4EwQsKbARbTR81Q"/>
+<div class="absolute inset-0 p-12 flex flex-col justify-end">
+<span class="font-label uppercase tracking-widest text-xs mb-4 text-primary-fixed">The Craft</span>
+<h2 class="font-headline text-4xl font-bold max-w-lg mb-4">DECONSTRUCTING THE 'NOIR' SOLE ARCHITECTURE</h2>
+<a class="inline-flex items-center gap-2 font-label uppercase tracking-widest text-sm hover:underline" href="#">Read Story <span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span></a>
+</div>
+</div>
+<div class="md:col-span-4 h-[400px] bg-primary-fixed rounded-xl p-12 flex flex-col justify-between text-on-primary-fixed">
+<span class="material-symbols-outlined text-5xl" data-icon="history">history</span>
+<div>
+<h3 class="font-headline text-3xl font-bold mb-4 tracking-tighter">ARCHIVE ACCESS</h3>
+<p class="font-body text-sm mb-6 opacity-80 leading-relaxed">Missed a release? Access our secondary authenticated vault for previous seasonal drops.</p>
+<button class="w-full py-4 border-2 border-on-primary-fixed font-headline font-bold rounded-lg hover:bg-on-primary-fixed hover:text-primary-fixed transition-colors">EXPLORE VAULT</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Nav for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 h-20 glass-nav flex items-center justify-around px-4 z-50">
+<button class="flex flex-col items-center gap-1 text-[#CCFF00]">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+<span class="text-[10px] font-label uppercase tracking-widest">Drops</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-white/50">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+<span class="text-[10px] font-label uppercase tracking-widest">Vault</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-white/50">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="text-[10px] font-label uppercase tracking-widest">Stories</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-white/50">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-label uppercase tracking-widest">Profile</span>
+</button>
+</nav>
+<!-- Footer Space -->
+<footer class="bg-surface-container-lowest py-24 px-8 border-t border-outline-variant/10">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-2">
+<div class="text-3xl font-bold tracking-tighter text-white font-headline mb-8 uppercase">StepX Noir</div>
+<p class="text-on-surface-variant max-w-sm body-lg leading-relaxed mb-8">Elevating sneaker culture through curated technical drops and editorial storytelling.</p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary-fixed" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="text-on-surface-variant hover:text-primary-fixed" href="#"><span class="material-symbols-outlined" data-icon="contact_support">contact_support</span></a>
+<a class="text-on-surface-variant hover:text-primary-fixed" href="#"><span class="material-symbols-outlined" data-icon="language">language</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-headline font-bold mb-6 text-sm tracking-[0.2em] uppercase">Ecosystem</h4>
+<ul class="space-y-4 text-on-surface-variant font-label text-sm">
+<li><a class="hover:text-white transition-colors" href="#">The Vault</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Drops Calendar</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Editorial Feed</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Authenticity Check</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-bold mb-6 text-sm tracking-[0.2em] uppercase">Connect</h4>
+<ul class="space-y-4 text-on-surface-variant font-label text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Membership</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Support Portal</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Discord Community</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-24 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between gap-4">
+<p class="text-xs font-label text-on-surface-variant/50 uppercase tracking-widest">© 2024 StepX Noir. Engineered for the culture.</p>
+<p class="text-xs font-label text-on-surface-variant/50 uppercase tracking-widest">All artifacts authenticated.</p>
+</div>
+</footer>
+</body></html>

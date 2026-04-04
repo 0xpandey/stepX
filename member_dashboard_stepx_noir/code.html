@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#690005",
+                        "on-surface-variant": "#c4c9ac",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#b6c9d8",
+                        "inverse-on-surface": "#313030",
+                        "secondary-fixed-dim": "#b5d25e",
+                        "outline": "#8e9379",
+                        "secondary-container": "#5d7602",
+                        "on-secondary": "#283500",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary": "#283500",
+                        "primary": "#ffffff",
+                        "on-surface": "#e5e2e1",
+                        "surface-container": "#201f1f",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-dim": "#131313",
+                        "secondary": "#b5d25e",
+                        "on-tertiary-fixed": "#0b1d29",
+                        "background": "#131313",
+                        "tertiary-fixed": "#d2e5f5",
+                        "on-tertiary-fixed-variant": "#374956",
+                        "on-secondary-fixed": "#161e00",
+                        "surface": "#131313",
+                        "primary-fixed": "#c3f400",
+                        "primary-container": "#c3f400",
+                        "surface-tint": "#abd600",
+                        "surface-container-highest": "#353534",
+                        "surface-bright": "#3a3939",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "outline-variant": "#444933",
+                        "primary-fixed-dim": "#abd600",
+                        "surface-variant": "#353534",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary-fixed": "#d0ef77",
+                        "error-container": "#93000a",
+                        "on-tertiary": "#21323e",
+                        "on-background": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#3c4d00",
+                        "inverse-primary": "#506600",
+                        "on-secondary-container": "#defd83",
+                        "on-primary-fixed": "#161e00",
+                        "tertiary-container": "#d2e5f5",
+                        "on-tertiary-container": "#556774",
+                        "tertiary": "#ffffff",
+                        "on-primary-container": "#556d00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .vault-card-gradient {
+            background: linear-gradient(135deg, #1C1B1B 0%, #0E0E0E 100%);
+        }
+        .neon-glow-primary {
+            box-shadow: 0 0 40px rgba(195, 244, 0, 0.08);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/60 backdrop-blur-xl shadow-[0_0_40px_rgba(204,255,0,0.04)]">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-[1440px] mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#CCFF00] font-['Space_Grotesk']">
+                StepX Noir
+            </div>
+<div class="hidden md:flex items-center space-x-12 font-['Space_Grotesk'] tracking-tight">
+<a class="text-white/60 hover:text-white transition-colors" href="#">The Vault</a>
+<a class="text-white/60 hover:text-white transition-colors" href="#">Drops</a>
+<a class="text-white/60 hover:text-white transition-colors" href="#">Curation</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="material-symbols-outlined text-white/60 hover:text-[#CCFF00] transition-colors" data-icon="shopping_bag">shopping_bag</button>
+<div class="w-10 h-10 rounded-full border border-[#CCFF00] p-0.5 overflow-hidden ring-4 ring-[#CCFF00]/10">
+<img alt="Member Profile Avatar" class="w-full h-full object-cover rounded-full" data-alt="Close up studio portrait of a stylish young man with a focused expression, wearing luxury black streetwear against a dark backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQJnytwSBik-k6wAnImTDXZZwRY3d_uaNcPlTf1hcFJMk6uH_x53gA2Kyjg9Tb4WIbSYjErJs3w0lo4k_b6-33JRFd9XkPNj1af11hWUxk_pIrFS7xDTU9KIhtI3GwGBXPtttc4ANrLTf7sT8ltuIFdVQvATtD6jClqLc6a0MDcKU7aFXYVyQgFRB8e2D4k66qz-UEMieHg1HPj1Q7K6QSr4xKRnFLum5_PhIwvTCWAiaMOxrbRrISDcTYiwMEmSRS5-Zp3Z_pVQ"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-32 max-w-[1440px] mx-auto px-8">
+<!-- Hero Identity Section -->
+<header class="mb-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-7">
+<div class="inline-flex items-center space-x-3 bg-surface-container-high px-4 py-1.5 rounded-full mb-6">
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span>
+<span class="text-[10px] font-label uppercase tracking-widest text-primary-fixed">Verified Elite Member</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-headline font-bold tracking-tighter leading-none mb-6">
+                    MARCUS <br/><span class="text-outline">SANTIAGO</span>
+</h1>
+<p class="text-on-surface-variant text-lg max-w-md leading-relaxed">
+                    Accessing encrypted archives. Your standing within The Vault remains top-tier. Artifact acquisition active.
+                </p>
+</div>
+<div class="lg:col-span-5">
+<!-- Premium Member Card -->
+<div class="vault-card-gradient relative p-8 rounded-2xl border border-outline-variant/30 overflow-hidden neon-glow-primary group transition-all duration-500 hover:border-primary-fixed/20">
+<!-- Geometric Texture Background -->
+<div class="absolute top-0 right-0 opacity-10 pointer-events-none">
+<svg class="text-primary-fixed" height="300" viewbox="0 0 100 100" width="300">
+<path d="M0 0 L100 100 M100 0 L0 100" stroke="currentColor" stroke-width="0.5"></path>
+<circle cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-width="0.2"></circle>
+</svg>
+</div>
+<div class="relative z-10 flex flex-col h-full justify-between min-h-[220px]">
+<div class="flex justify-between items-start">
+<div>
+<div class="text-[10px] font-label uppercase tracking-[0.2em] text-on-surface-variant mb-1">Membership Class</div>
+<div class="text-2xl font-headline font-bold text-primary-fixed">ELITE / PRO</div>
+</div>
+<div class="text-right">
+<div class="text-[10px] font-label uppercase tracking-[0.2em] text-on-surface-variant mb-1">Access Level</div>
+<div class="text-2xl font-headline font-bold text-white">004-X</div>
+</div>
+</div>
+<div class="mt-12 flex justify-between items-end">
+<div>
+<div class="text-[10px] font-label uppercase tracking-[0.2em] text-on-surface-variant mb-1">Member ID</div>
+<div class="font-mono text-sm tracking-widest text-white/80">7723-BK-990-2024</div>
+</div>
+<div class="w-12 h-12 bg-primary-fixed flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-on-primary-fixed text-3xl" data-icon="fingerprint">fingerprint</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+<div class="bg-surface-container-low p-8 rounded-2xl border border-transparent hover:bg-surface-container transition-colors">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="token">token</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Available</span>
+</div>
+<div class="text-4xl font-headline font-bold mb-1">12,450</div>
+<div class="text-sm font-label uppercase tracking-widest text-outline">Vault Credits</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-2xl border border-transparent hover:bg-surface-container transition-colors">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="box_add">box_add</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">This Month</span>
+</div>
+<div class="text-4xl font-headline font-bold mb-1">03</div>
+<div class="text-sm font-label uppercase tracking-widest text-outline">Artifacts Secured</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-2xl border border-transparent hover:bg-surface-container transition-colors">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="hotel_class">hotel_class</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Tier Progress</span>
+</div>
+<div class="relative h-2 bg-surface-container-highest rounded-full mt-4 mb-3">
+<div class="absolute left-0 top-0 h-full bg-primary-fixed rounded-full w-[85%]"></div>
+</div>
+<div class="text-xs font-label uppercase tracking-widest text-outline flex justify-between">
+<span>Pro Tier</span>
+<span class="text-white">85% to Vanguard</span>
+</div>
+</div>
+</div>
+<!-- Content Split Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Recent Artifacts (Orders) -->
+<section class="lg:col-span-7">
+<div class="flex items-center justify-between mb-10">
+<h2 class="text-2xl font-headline font-bold tracking-tight">Recent Artifacts</h2>
+<button class="text-[10px] font-label uppercase tracking-[0.2em] text-primary-fixed border-b border-primary-fixed/30 pb-1">View Archive</button>
+</div>
+<div class="space-y-6">
+<!-- Artifact Item 1 -->
+<div class="group bg-surface-container-low/40 p-4 rounded-xl flex items-center space-x-6 hover:bg-surface-container-low transition-all duration-300">
+<div class="w-24 h-24 bg-surface-container-highest rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Shadow Runner" class="w-full h-full object-cover" data-alt="A detailed shot of a stealthy all-black technical sneaker with textured carbon fiber panels on a dark concrete background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPPQTlHCkP1Obqcy_8dpUrauibE62khH17Uf4Zd3A5arIDBjCjoMflrMxSkajkB7zL16FaB9fLbWtCsmkN-hrBCr5BDZr4OZOO-KBjZTCdAqEoS-SXgYv5WMPnwIjcdfLofC8rCFL0Tj3vs3jzPW-VjkmfrALRV-kSGoqJN8WBDqSdej7EXd-NnJcRmHRBPPskz3TjWhhV6P-QSBuoLUroZXDBRKCOBhP9hH3cmkCUVNbLL6oPOe-wYYbjWIEVjZpJfqcopixbOw"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-lg">SHADOW RUNNER X-1</h3>
+<p class="text-sm text-on-surface-variant">Order #9921-X • May 14</p>
+</div>
+<span class="bg-primary-fixed/10 text-primary-fixed text-[10px] font-label px-3 py-1 rounded-full uppercase tracking-widest">Delivered</span>
+</div>
+<div class="mt-4 flex space-x-8">
+<div class="text-[10px] font-label uppercase tracking-widest text-outline">Size: <span class="text-white">10.5</span></div>
+<div class="text-[10px] font-label uppercase tracking-widest text-outline">Price: <span class="text-white">450 VC</span></div>
+</div>
+</div>
+</div>
+<!-- Artifact Item 2 -->
+<div class="group bg-surface-container-low/40 p-4 rounded-xl flex items-center space-x-6 hover:bg-surface-container-low transition-all duration-300">
+<div class="w-24 h-24 bg-surface-container-highest rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Acid High Top" class="w-full h-full object-cover" data-alt="High-top sneaker with neon yellow accents and futuristic translucent sole in a professional dark studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_CWqmPwIB_JtGWrNXDmWSiVtvSuxTy87y48oxPWIcmCRtWfqZ1K2e2qqVJBaki7EBS2VXlgKcGIJjuZQcJS-qf7o0CWkUyrYMhua2SmgEDzoKfydNEHQG-LWDc1VFc7j6B_KrTTYY0id6W-gHPsVwyLR3YULP6EkGgUtv8oAhjC8Kg7YNED_IP4VmksRvx5DbFYIo5O72sJTuhStm39IgEeYeOjbFD2q5YX-O9p6otpEaSYSdb76stZpHky9wvx3at46EzNPaJg"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-lg">KINETIC HIGH 'ACID'</h3>
+<p class="text-sm text-on-surface-variant">Order #8102-X • Apr 28</p>
+</div>
+<span class="bg-secondary-container/20 text-secondary-fixed text-[10px] font-label px-3 py-1 rounded-full uppercase tracking-widest">Processing</span>
+</div>
+<div class="mt-4 flex space-x-8">
+<div class="text-[10px] font-label uppercase tracking-widest text-outline">Size: <span class="text-white">11.0</span></div>
+<div class="text-[10px] font-label uppercase tracking-widest text-outline">Price: <span class="text-white">320 VC</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Saved Grails (Wishlist) -->
+<section class="lg:col-span-5">
+<div class="flex items-center justify-between mb-10">
+<h2 class="text-2xl font-headline font-bold tracking-tight">Saved Grails</h2>
+<span class="text-[10px] font-label uppercase tracking-widest text-outline">04 Items</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Grail Card 1 -->
+<div class="group relative aspect-square bg-surface-container-low rounded-2xl overflow-hidden cursor-pointer">
+<img alt="Futuristic Sneaker" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-110" data-alt="Avant-garde designer sneaker with layered textures and metallic silver elements in a high-contrast dark fashion shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdNa0wTDEE3u-NWL2MFuPtCX10eYht_7mSrFusIlhDbBDtd3KSq4spZHHv7ZncIkx0N-O7WEr_ZPHoOtVQeDysEwzHhzPA_hdro6WVTXo8fjcpuNizpd85ztCm0G_A8tpGEVysyj2cUaH54qU_NJYoIV73KExcTn_4ybx5F9pSONJXCAsuXxo_Ss4mIlMSsqrzHOqWL5nS-e0WItx1pa25iLJpyAI0IgeGQzvcE4odwPobQZSZnUXtsGWbGu1SHDB-REgeirCtwA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+<p class="text-[10px] font-label uppercase tracking-widest text-primary-fixed mb-1">Reserve Now</p>
+<h4 class="font-headline font-bold text-sm text-white">ORBITA ALPHA</h4>
+</div>
+<button class="absolute top-4 right-4 w-8 h-8 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<!-- Grail Card 2 -->
+<div class="group relative aspect-square bg-surface-container-low rounded-2xl overflow-hidden cursor-pointer">
+<img alt="Luxury Tech Sneaker" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-110" data-alt="Minimalist luxury sneaker with matte black leather and neon detailing on a stark black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQYIVwTKUzJAzbG3yXfcQnuTMx2MqWaUuFnzqwqnBl4x-JXe5UNmb7RHcVoAWyBrZX36_1qiaLNT-y8gpjRf9ZCJDhJfGzkP6l_IaC-K-mSgZJm2yXEADWnmeduiO7cyEt10uY1d7y0apElrzV_25hQjjXjWWAbBpM29v4MDsMZzf1DEQBRgmKtDu_z0EyFJwZTViwqXTNgVZjxsaSFXbsmjNH8D1ofd9B0_PNcrGvRFIYpGji_5uvYrQGQv2ameNopXGK7ruf5w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+<p class="text-[10px] font-label uppercase tracking-widest text-primary-fixed mb-1">Rare Drop</p>
+<h4 class="font-headline font-bold text-sm text-white">VOID SPECTRE</h4>
+</div>
+<button class="absolute top-4 right-4 w-8 h-8 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+</div>
+<div class="mt-8 bg-surface-container-low p-6 rounded-2xl border-l-2 border-primary-fixed">
+<p class="text-sm leading-relaxed italic text-on-surface-variant">
+                        "Your grails are monitored by our curation AI. You will receive encrypted alerts 15 minutes prior to restock."
+                    </p>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<div class="md:hidden">
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-8 pt-4 bg-[#1C1B1B]/80 backdrop-blur-2xl z-50 rounded-t-3xl">
+<a class="flex flex-col items-center justify-center text-white/40 px-6 py-2 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+<span class="font-['Manrope'] uppercase tracking-widest text-[10px] mt-1">Vault</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 px-6 py-2 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dataset">dataset</span>
+<span class="font-['Manrope'] uppercase tracking-widest text-[10px] mt-1">Market</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 px-6 py-2 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-['Manrope'] uppercase tracking-widest text-[10px] mt-1">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#CCFF00] text-[#161E00] rounded-xl px-6 py-2 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person_config" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Manrope'] uppercase tracking-widest text-[10px] mt-1">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StepX Noir | Account Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Manrope', sans-serif;
+        }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-on-surface": "#313030",
+                      "primary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#374956",
+                      "surface-container-high": "#2a2a2a",
+                      "tertiary-fixed-dim": "#b6c9d8",
+                      "on-tertiary": "#21323e",
+                      "on-surface": "#e5e2e1",
+                      "on-primary-container": "#556d00",
+                      "surface-dim": "#131313",
+                      "primary-fixed-dim": "#abd600",
+                      "inverse-surface": "#e5e2e1",
+                      "on-error": "#690005",
+                      "tertiary-container": "#d2e5f5",
+                      "on-tertiary-container": "#556774",
+                      "surface-container-highest": "#353534",
+                      "surface-container": "#201f1f",
+                      "on-secondary-fixed": "#161e00",
+                      "surface-variant": "#353534",
+                      "secondary-fixed": "#d0ef77",
+                      "on-surface-variant": "#c4c9ac",
+                      "primary-container": "#c3f400",
+                      "on-background": "#e5e2e1",
+                      "primary-fixed": "#c3f400",
+                      "surface-bright": "#3a3939",
+                      "on-secondary": "#283500",
+                      "on-primary-fixed-variant": "#3c4d00",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-fixed": "#161e00",
+                      "error": "#ffb4ab",
+                      "background": "#131313",
+                      "surface-container-low": "#1c1b1b",
+                      "surface": "#131313",
+                      "secondary-fixed-dim": "#b5d25e",
+                      "outline": "#8e9379",
+                      "secondary": "#b5d25e",
+                      "surface-container-lowest": "#0e0e0e",
+                      "secondary-container": "#5d7602",
+                      "inverse-primary": "#506600",
+                      "surface-tint": "#abd600",
+                      "error-container": "#93000a",
+                      "outline-variant": "#444933",
+                      "tertiary-fixed": "#d2e5f5",
+                      "on-primary": "#283500",
+                      "on-tertiary-fixed": "#0b1d29",
+                      "tertiary": "#ffffff",
+                      "on-secondary-container": "#defd83",
+                      "on-secondary-fixed-variant": "#3c4d00"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Space Grotesk"],
+                      "body": ["Manrope"],
+                      "label": ["Manrope"]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/60 backdrop-blur-xl flex justify-between items-center px-8 h-20 w-full max-w-none">
+<div class="text-2xl font-bold tracking-tighter text-white font-headline">StepX Noir</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-headline tracking-tight uppercase text-white/70 hover:text-[#CCFF00] transition-colors duration-300" href="#">Drops</a>
+<a class="font-headline tracking-tight uppercase text-white/70 hover:text-[#CCFF00] transition-colors duration-300" href="#">Vault</a>
+<a class="font-headline tracking-tight uppercase text-white/70 hover:text-[#CCFF00] transition-colors duration-300" href="#">Editorial</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-white/70 hover:text-[#CCFF00] transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border-2 border-[#CCFF00]">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="close-up portrait of a stylish man with sharp features against a dark, moody studio background with cyan and magenta highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcCmzkuRu8Uh9vkAQhswY3_ZGWZ8FySSmNFNqEjD5yYBDRKin7CzMCCR3OuVqrUXLlwvXdEYzOQshzjeD4PC0LVFM1VjGJASYtwFs3KlorOZ8AWB30u8VhXQ4dqZzioJLkQLjJunTX6Rsf_90OdRZYA5n2AZWozQYsz-0-shHq51Ykf0I6VvAK9-5kNmBPYr5IbN-LAJT2GDgXH2zV7ZuXa6m-Duip7rscBH7x3XaJ_QjU8chKT51fs5joGlLJLq7Mk7TjAon_zA"/>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+<!-- Header Section with Asymmetry -->
+<header class="mb-20 flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="max-w-2xl">
+<div class="inline-flex items-center px-3 py-1 mb-6 rounded-full bg-primary-fixed text-on-primary-fixed font-label text-xs font-bold tracking-[0.1em] uppercase">
+<span class="material-symbols-outlined text-sm mr-1.5" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    Verified Elite Member
+                </div>
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter text-primary leading-tight">
+                    Welcome back, <br/><span class="text-primary-fixed">Alexander.</span>
+</h1>
+</div>
+<div class="text-right">
+<p class="font-label text-on-surface-variant uppercase tracking-widest text-xs mb-1">Current Status</p>
+<p class="font-headline text-2xl font-medium">Vault Tier IV</p>
+</div>
+</header>
+<!-- Main Dashboard Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Vault Summary Card -->
+<div class="md:col-span-8 bg-surface-container-low p-8 rounded-lg relative overflow-hidden group">
+<div class="relative z-10">
+<p class="font-label text-on-surface-variant uppercase tracking-widest text-xs mb-8">Vault Collection</p>
+<div class="flex items-baseline gap-4 mb-2">
+<span class="font-headline text-8xl font-bold tracking-tighter">42</span>
+<span class="font-headline text-2xl text-primary-fixed uppercase tracking-tighter">Grails</span>
+</div>
+<p class="text-on-surface-variant max-w-sm mb-8">Your portfolio value has increased by 12.4% this quarter. The "Reverse Mocha" remains your highest performing asset.</p>
+<button class="bg-primary-fixed text-on-primary-fixed px-6 py-3 rounded-md font-bold uppercase text-sm tracking-wider hover:opacity-90 transition-opacity">
+                        Enter The Vault
+                    </button>
+</div>
+<!-- Abstract Design Element -->
+<div class="absolute right-[-10%] bottom-[-20%] w-96 h-96 opacity-10 group-hover:opacity-20 transition-opacity duration-700">
+<span class="material-symbols-outlined text-[240px]" data-icon="inventory_2">inventory_2</span>
+</div>
+</div>
+<!-- Profile Summary / Quick Stats -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="bg-surface-container-high p-8 rounded-lg flex-1">
+<p class="font-label text-on-surface-variant uppercase tracking-widest text-xs mb-6">Profile Summary</p>
+<div class="space-y-6">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Member Since</span>
+<span class="font-medium">OCT 2021</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Last Drop</span>
+<span class="font-medium text-primary-fixed">SECURED</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Points</span>
+<span class="font-medium">12,840 PX</span>
+</div>
+</div>
+</div>
+<!-- Quick Link: Security -->
+<a class="bg-surface-container-low hover:bg-surface-container-high p-6 rounded-lg flex justify-between items-center transition-all duration-300 group border-b-2 border-transparent hover:border-primary-fixed" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="shield">shield</span>
+<span class="font-headline uppercase tracking-tight text-lg">Security</span>
+</div>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Recent Order Status -->
+<div class="md:col-span-6 bg-surface-container-low p-8 rounded-lg">
+<div class="flex justify-between items-center mb-8">
+<p class="font-label text-on-surface-variant uppercase tracking-widest text-xs">Recent Logistics</p>
+<span class="bg-secondary-container/20 text-on-secondary-container px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full">In Transit</span>
+</div>
+<div class="flex items-start gap-6">
+<div class="w-24 h-24 bg-surface-container-highest rounded p-2">
+<img alt="Recent order sneaker" class="w-full h-full object-contain" data-alt="high-end minimalist white sneaker with architectural design details on a clean dark grey pedestal with sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArJM6m8FjIDD7qe2b-NsuEUR-5IWxb-zCdjTAQ0CBSRRyRUE7Ecd0k55WsFTJWgFtlRSShlJg2YGMu0u4ricVyB09DSBxcfEPBML0G7bzsKGOA5FVUpRgReJdqaPd7ZiRbVNZ7G_rUVlCW0fIqx7grVdDfypZ8Iwz4w0fpEc2FHXEu6x6kvEWKcf7Jz7eOE7_9E7pkkd1sGD1w7GlLzN1l6VKUEDaT968K9VKjWCBqwFFfSkvyNhn0pCWTqqvh6bh8axByTXHUOg"/>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold mb-1">StepX Arid Fusion '01</h3>
+<p class="text-sm text-on-surface-variant mb-4">Order #STX-99420-B</p>
+<div class="flex items-center gap-2 text-xs text-primary-fixed font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="local_shipping">local_shipping</span>
+                            EST. DELIVERY: TOMORROW, 18:00
+                        </div>
+</div>
+</div>
+</div>
+<!-- Quick Links / Logistics -->
+<div class="md:col-span-3 bg-surface-container-low p-8 rounded-lg flex flex-col justify-between group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div>
+<span class="material-symbols-outlined text-3xl mb-4" data-icon="local_post_office">local_post_office</span>
+<h3 class="font-headline text-xl font-bold uppercase tracking-tighter">Logistics</h3>
+<p class="text-sm text-on-surface-variant mt-2">Manage shipping vault addresses and authentication documents.</p>
+</div>
+<div class="pt-6 border-t border-white/5 flex justify-end">
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="arrow_outward">arrow_outward</span>
+</div>
+</div>
+<!-- Log Out Component -->
+<div class="md:col-span-3 bg-[#1c1b1b] p-8 rounded-lg flex flex-col justify-between group cursor-pointer hover:bg-error-container/10 transition-all duration-300">
+<div>
+<span class="material-symbols-outlined text-3xl mb-4 text-error" data-icon="logout">logout</span>
+<h3 class="font-headline text-xl font-bold uppercase tracking-tighter">End Session</h3>
+<p class="text-sm text-on-surface-variant mt-2">Securely log out of the Noir platform.</p>
+</div>
+<div class="pt-6 flex justify-end">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity">Disconnect Vault</span>
+</div>
+</div>
+</div>
+<!-- Footer Accent -->
+<footer class="mt-32 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-[10px] font-label uppercase tracking-[0.3em] text-on-surface-variant">
+                © 2024 StepX Noir // Kinetic Vault Ecosystem
+            </div>
+<div class="flex gap-8 text-[10px] font-label uppercase tracking-[0.3em] text-on-surface-variant">
+<a class="hover:text-primary-fixed transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary-fixed transition-colors" href="#">Privacy Protocol</a>
+<a class="hover:text-primary-fixed transition-colors" href="#">Help</a>
+</div>
+</footer>
+</main>
+<!-- Decorative Grid Overlay -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[-1]" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 40px 40px;"></div>
+</body></html>

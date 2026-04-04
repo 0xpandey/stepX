@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#3c4d00",
+                    "surface-container-lowest": "#0e0e0e",
+                    "primary-fixed-dim": "#abd600",
+                    "tertiary-fixed": "#d2e5f5",
+                    "on-secondary": "#283500",
+                    "outline-variant": "#444933",
+                    "inverse-on-surface": "#313030",
+                    "surface-variant": "#353534",
+                    "surface-container-high": "#2a2a2a",
+                    "primary": "#ffffff",
+                    "on-error-container": "#ffdad6",
+                    "error-container": "#93000a",
+                    "secondary-fixed-dim": "#b5d25e",
+                    "on-surface-variant": "#c4c9ac",
+                    "surface-bright": "#3a3939",
+                    "on-tertiary-fixed": "#0b1d29",
+                    "on-secondary-container": "#defd83",
+                    "on-primary-container": "#556d00",
+                    "tertiary": "#ffffff",
+                    "on-secondary-fixed": "#161e00",
+                    "on-primary": "#283500",
+                    "error": "#ffb4ab",
+                    "outline": "#8e9379",
+                    "background": "#131313",
+                    "on-tertiary": "#21323e",
+                    "on-tertiary-container": "#556774",
+                    "on-error": "#690005",
+                    "on-primary-fixed": "#161e00",
+                    "secondary-fixed": "#d0ef77",
+                    "primary-container": "#c3f400",
+                    "tertiary-fixed-dim": "#b6c9d8",
+                    "on-surface": "#e5e2e1",
+                    "tertiary-container": "#d2e5f5",
+                    "secondary": "#b5d25e",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container": "#201f1f",
+                    "secondary-container": "#5d7602",
+                    "primary-fixed": "#c3f400",
+                    "inverse-surface": "#e5e2e1",
+                    "on-secondary-fixed-variant": "#3c4d00",
+                    "surface-tint": "#abd600",
+                    "surface-dim": "#131313",
+                    "inverse-primary": "#506600",
+                    "surface-container-highest": "#353534",
+                    "on-tertiary-fixed-variant": "#374956",
+                    "surface": "#131313",
+                    "on-background": "#e5e2e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #131313;
+        color: #e5e2e1;
+        font-family: 'Manrope', sans-serif;
+      }
+    </style>
+</head>
+<body class="flex min-h-screen">
+<!-- SideNavBar (Authority: JSON) -->
+<aside class="hidden md:flex h-screen w-64 border-r border-white/5 bg-[#0E0E0E] flex-col py-8 px-4 space-y-6 fixed left-0 top-0 z-[60] shadow-[20px_0_40px_rgba(204,255,0,0.04)]">
+<div class="px-2">
+<span class="text-xl font-black text-white font-headline">StepX Noir</span>
+</div>
+<div class="flex items-center space-x-3 px-2 py-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="Member Profile" data-alt="Close-up portrait of a stylish person wearing a dark streetwear hoodie and minimalist jewelry in cinematic low light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7OEABQB3Y8AjXgXtwOf9kBYdDt_DUnXp2cYq9qhDz3yACGaaqbuGUAworYmZJqsrSQx8Q71Hr2ySpMeGSzCI2sa_-ub65UJY9rB9V7Ptlhg38wD8deRaXh5zHPbzs0P7kKaK4Eq2x0O8XyxYFIVicusRFlwoP_dXexHbX3VmBRFBGVrHKrY7uPAV1YtrEzuCTvsXdB34Ru5WMjLpocO9SkyM8UYBA-JAOfybaBZWnlVolG1iGpMrZhdF4y5jXXE4_IwYPAv9cjQ"/>
+</div>
+<div>
+<p class="text-white text-xs font-headline font-bold uppercase tracking-widest">The Vault</p>
+<p class="text-white/40 text-[10px] font-label uppercase tracking-tighter">Premium Member</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<div class="flex items-center space-x-3 p-3 text-white/60 hover:text-white hover:bg-white/5 transition-transform duration-300 cursor-pointer active:opacity-80 hover:translate-x-1">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+<span class="font-headline uppercase tracking-[0.1em] text-xs">New Arrivals</span>
+</div>
+<div class="flex items-center space-x-3 p-3 text-white/60 hover:text-white hover:bg-white/5 transition-transform duration-300 cursor-pointer active:opacity-80 hover:translate-x-1">
+<span class="material-symbols-outlined text-lg">grid_view</span>
+<span class="font-headline uppercase tracking-[0.1em] text-xs">Shop All</span>
+</div>
+<!-- Active Navigation: Collections -->
+<div class="flex items-center space-x-3 p-3 bg-[#CCFF00] text-[#161E00] rounded-sm font-bold transition-transform duration-300 cursor-pointer active:opacity-80 hover:translate-x-1">
+<span class="material-symbols-outlined text-lg">layers</span>
+<span class="font-headline uppercase tracking-[0.1em] text-xs">Collections</span>
+</div>
+<div class="flex items-center space-x-3 p-3 text-white/60 hover:text-white hover:bg-white/5 transition-transform duration-300 cursor-pointer active:opacity-80 hover:translate-x-1">
+<span class="material-symbols-outlined text-lg">package_2</span>
+<span class="font-headline uppercase tracking-[0.1em] text-xs">Orders</span>
+</div>
+<div class="flex items-center space-x-3 p-3 text-white/60 hover:text-white hover:bg-white/5 transition-transform duration-300 cursor-pointer active:opacity-80 hover:translate-x-1">
+<span class="material-symbols-outlined text-lg">favorite</span>
+<span class="font-headline uppercase tracking-[0.1em] text-xs">Wishlist</span>
+</div>
+<div class="flex items-center space-x-3 p-3 text-white/60 hover:text-white hover:bg-white/5 transition-transform duration-300 cursor-pointer active:opacity-80 hover:translate-x-1">
+<span class="material-symbols-outlined text-lg">help_outline</span>
+<span class="font-headline uppercase tracking-[0.1em] text-xs">Support</span>
+</div>
+<div class="flex items-center space-x-3 p-3 text-white/60 hover:text-white hover:bg-white/5 transition-transform duration-300 cursor-pointer active:opacity-80 hover:translate-x-1">
+<span class="material-symbols-outlined text-lg">settings</span>
+<span class="font-headline uppercase tracking-[0.1em] text-xs">Settings</span>
+</div>
+</nav>
+<button class="w-full py-4 bg-primary-fixed text-on-primary-fixed font-headline font-bold uppercase tracking-widest text-[10px] rounded-sm hover:opacity-90 transition-all">
+            Join the Drop
+        </button>
+</aside>
+<div class="flex-1 flex flex-col md:ml-64">
+<!-- TopNavBar (Authority: JSON) -->
+<header class="fixed top-0 right-0 left-0 md:left-64 z-50 h-20 flex justify-between items-center px-8 bg-[#131313]/60 backdrop-blur-xl w-full">
+<div class="flex items-center space-x-8">
+<div class="flex items-center bg-white/5 px-4 py-2 rounded-full border border-white/10 group focus-within:border-primary-fixed transition-all">
+<span class="material-symbols-outlined text-white/50 group-focus-within:text-primary-fixed text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-white placeholder-white/30 w-48" placeholder="Search Archives" type="text"/>
+</div>
+<nav class="hidden lg:flex space-x-8 font-headline tracking-tight text-sm">
+<a class="text-white/70 hover:text-white transition-colors" href="#">Drops</a>
+<a class="text-white/70 hover:text-white transition-colors" href="#">Vault</a>
+<a class="text-white/70 hover:text-white transition-colors" href="#">Editorial</a>
+</nav>
+</div>
+<div class="flex items-center space-x-6">
+<button class="relative hover:bg-white/5 p-2 transition-all rounded-full group">
+<span class="material-symbols-outlined text-white">shopping_cart</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-primary-fixed rounded-full"></span>
+</button>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-white">menu</span>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="mt-20 px-8 py-16 max-w-[1440px] mx-auto w-full">
+<!-- Header Section (Asymmetric Editorial Style) -->
+<section class="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="max-w-2xl">
+<span class="text-primary-fixed font-label uppercase tracking-[0.2em] text-xs mb-4 block">Archive Curation</span>
+<h1 class="text-6xl md:text-8xl font-headline font-bold tracking-tighter text-white leading-none">THE<br/>CURATED<br/>VAULT</h1>
+</div>
+<div class="max-w-sm text-right">
+<p class="text-white/60 font-body text-lg leading-relaxed italic">
+                        "Streetwear isn't just clothing; it's a living anthology of urban evolution and creative defiance."
+                    </p>
+<div class="mt-6 flex justify-end space-x-2">
+<span class="w-12 h-[1px] bg-primary-fixed self-center"></span>
+<span class="text-primary-fixed font-label uppercase tracking-widest text-[10px]">StepX Noir editorial</span>
+</div>
+</div>
+</section>
+<!-- Collections Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Card 1: Retro Vault -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low transition-all duration-500 hover:shadow-[0_0_80px_rgba(204,255,0,0.05)]">
+<img alt="Retro Vault Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="High-detail shot of vintage 1980s basketball sneakers with worn leather textures on a dark moody concrete background with orange accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE9yCTsit_QnWfl8Ky5wJgGqAGjlEwxU1-cHXLfA5DL_5hmHwqWRjrORR12xy4wZNi0479YlC7MsDG0PN5g3anBL1EM8od-DtXESbVLy70fcZ8W5ZTDrt4ExY9sNgMSpeq2O4ZAo8_ayWM-4DaqPKvDn-arL-J2-BtH34wBecnoBiI-6WZrvzILay4k73j47nX2lnz5toO_jQr5kd8Q1FFlYpIxw1LVStDNcTw_B18LWuQR8cXofbTmusB8gyq-8s1DYceTssVRA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute top-8 right-8">
+<span class="px-4 py-2 bg-black/40 backdrop-blur-md text-primary-fixed font-label uppercase tracking-widest text-[10px] border border-white/10">Limited Release</span>
+</div>
+</div>
+<div class="mt-8 space-y-4">
+<h3 class="text-3xl font-headline font-bold text-white group-hover:text-primary-fixed transition-colors">Retro Vault</h3>
+<p class="text-white/50 font-body text-sm max-w-md leading-relaxed">
+                            A deep dive into the silhouettes that defined an era. Re-issued icons with original specifications and heritage craftsmanship.
+                        </p>
+<a class="inline-flex items-center space-x-2 text-primary-fixed font-label uppercase tracking-widest text-xs group/link" href="#">
+<span>View Collection</span>
+<span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2: Neon Pulse -->
+<div class="group cursor-pointer md:mt-24">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low transition-all duration-500 hover:shadow-[0_0_80px_rgba(204,255,0,0.05)]">
+<img alt="Neon Pulse Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Futuristic technical sneakers with vibrant lime green accents and translucent materials glowing under ultraviolet studio lights in a dark room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYAB-IwvKsueeXax2-sCNS1jJDfyzqEQMp1tMrWdSMTs0alAJoSqIzHvwNrPZdihiHGacZI2jkrv5EpFYjWHQUTJmsp8o-PqEjsH6K5FouU4hANaEj2aUBU65oLXQIEjEBWHJJLlF-mcasfk5oU9bWD7GVdWLbdGvR2EYmc4ByZ_cy0C2Erydn48ndN452J6p2y5Kx810-56lC0W3qR1NHFDBXoBSyi0nrJethOr6FsAgFXuvopOOimgnBBIIjA2XZcgjWcM8CJw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute top-8 right-8">
+<span class="px-4 py-2 bg-black/40 backdrop-blur-md text-primary-fixed font-label uppercase tracking-widest text-[10px] border border-white/10">Active Drop</span>
+</div>
+</div>
+<div class="mt-8 space-y-4">
+<h3 class="text-3xl font-headline font-bold text-white group-hover:text-primary-fixed transition-colors">Neon Pulse</h3>
+<p class="text-white/50 font-body text-sm max-w-md leading-relaxed">
+                            Vibrant aesthetics meet performance technology. High-contrast designs built for those who thrive in the electric glow of the city.
+                        </p>
+<a class="inline-flex items-center space-x-2 text-primary-fixed font-label uppercase tracking-widest text-xs group/link" href="#">
+<span>View Collection</span>
+<span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3: Midnight Noir -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low transition-all duration-500 hover:shadow-[0_0_80px_rgba(204,255,0,0.05)]">
+<img alt="Midnight Noir Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Triple black luxury leather sneakers positioned on a reflective black marble surface with sharp moody shadows and high-end dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeeKGo08wttCMJPYaC3iHvphbb1HaZhceK4H6B06Kezur5EhhMMUqQvEVJVM3K1wHRb-c_201N72_QEky1faQdZhZFQXqRV1fWyoih23gaFCtyrfQ36xExO08SKgjFZ3aRCjJO1-IMH0pIh834TwlICy9KF8-HtEXDquCCu6DtkitKmjMwRCtDT-rYwz-mRiobIqHlAPYpOnwI1t5ytiRWacdhFBFpo6j2BLVXMhjx_nqLTxUl7ywxreD1qJ4NaVzOa7EhbSjeYg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute top-8 right-8">
+<span class="px-4 py-2 bg-black/40 backdrop-blur-md text-primary-fixed font-label uppercase tracking-widest text-[10px] border border-white/10">Exclusive Curation</span>
+</div>
+</div>
+<div class="mt-8 space-y-4">
+<h3 class="text-3xl font-headline font-bold text-white group-hover:text-primary-fixed transition-colors">Midnight Noir</h3>
+<p class="text-white/50 font-body text-sm max-w-md leading-relaxed">
+                            Stealth, sophistication, and pure obsidian shades. A collection focused on texture and shadow, redefining the monochrome palette.
+                        </p>
+<a class="inline-flex items-center space-x-2 text-primary-fixed font-label uppercase tracking-widest text-xs group/link" href="#">
+<span>View Collection</span>
+<span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 4: Heritage Pack -->
+<div class="group cursor-pointer md:mt-24">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low transition-all duration-500 hover:shadow-[0_0_80px_rgba(204,255,0,0.05)]">
+<img alt="Heritage Pack Collection" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Classic white and cream sneakers with subtle suede details on a minimalist wooden pedestal with soft natural morning light shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSjeeIOZ2zWcO5D3SItWz6VuZX0yhjEIzmi60SkrSpDK1-GOJoNsVYSKFKQC1kbwsBYkanExi1cAwF3Udmd-W0b03zeHbpzmFymDoUoVbHacWgwmU3PpG4_EQgoZzcn8ZnyH7plDD8xhvplbd-h7O_gg2RAeFHlsKndGcvK6rce8wOiAx_xyArJI_4o2tiZ_nT5lLG0dl8btnfFJVziZ8nZOzqJbMpu8FqyyxG6mcEgf_FMtCn5anbE7XfhO_-hbmhXWBMpBcl9Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute top-8 right-8">
+<span class="px-4 py-2 bg-black/40 backdrop-blur-md text-primary-fixed font-label uppercase tracking-widest text-[10px] border border-white/10">Core Series</span>
+</div>
+</div>
+<div class="mt-8 space-y-4">
+<h3 class="text-3xl font-headline font-bold text-white group-hover:text-primary-fixed transition-colors">Heritage Pack</h3>
+<p class="text-white/50 font-body text-sm max-w-md leading-relaxed">
+                            The foundations of StepX. Neutral tones, premium suedes, and the enduring comfort of timeless craftsmanship.
+                        </p>
+<a class="inline-flex items-center space-x-2 text-primary-fixed font-label uppercase tracking-widest text-xs group/link" href="#">
+<span>View Collection</span>
+<span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA Section -->
+<section class="mt-32 p-12 bg-surface-container-low relative overflow-hidden">
+<div class="absolute top-0 right-0 opacity-10">
+<h2 class="text-[12rem] font-headline font-black tracking-tighter leading-none select-none">NOIR</h2>
+</div>
+<div class="relative z-10 max-w-xl">
+<h2 class="text-4xl font-headline font-bold text-white mb-4">NEVER MISS A DROP.</h2>
+<p class="text-white/60 mb-8">Get exclusive access to pre-releases and members-only editorial content.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<input class="flex-1 bg-surface-container-high border-none border-b-2 border-transparent focus:border-primary-fixed focus:ring-0 text-white font-label tracking-widest p-4 transition-all" placeholder="ENTER YOUR EMAIL" type="email"/>
+<button class="bg-primary-fixed text-on-primary-fixed font-headline font-bold px-8 py-4 uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all">
+                            Secure Access
+                        </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Minimal Footer -->
+<footer class="mt-24 border-t border-white/5 py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-8 bg-[#0E0E0E]">
+<div class="flex items-center space-x-2">
+<span class="text-xl font-black text-white font-headline">StepX Noir</span>
+<span class="text-[10px] text-white/30 font-label tracking-widest ml-4">© 2024 THE VAULT GLOBAL. ALL RIGHTS RESERVED.</span>
+</div>
+<div class="flex space-x-8 font-label text-[10px] uppercase tracking-[0.2em] text-white/40">
+<a class="hover:text-primary-fixed transition-colors" href="#">Legal</a>
+<a class="hover:text-primary-fixed transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary-fixed transition-colors" href="#">Cookies</a>
+<a class="hover:text-primary-fixed transition-colors" href="#">Sustainability</a>
+</div>
+</footer>
+</div>
+</body></html>

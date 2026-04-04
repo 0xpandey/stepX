@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#313030",
+                        "primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#374956",
+                        "surface-container-high": "#2a2a2a",
+                        "tertiary-fixed-dim": "#b6c9d8",
+                        "on-tertiary": "#21323e",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-container": "#556d00",
+                        "surface-dim": "#131313",
+                        "primary-fixed-dim": "#abd600",
+                        "inverse-surface": "#e5e2e1",
+                        "on-error": "#690005",
+                        "tertiary-container": "#d2e5f5",
+                        "on-tertiary-container": "#556774",
+                        "surface-container-highest": "#353534",
+                        "surface-container": "#201f1f",
+                        "on-secondary-fixed": "#161e00",
+                        "surface-variant": "#353534",
+                        "secondary-fixed": "#d0ef77",
+                        "on-surface-variant": "#c4c9ac",
+                        "primary-container": "#c3f400",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed": "#c3f400",
+                        "surface-bright": "#3a3939",
+                        "on-secondary": "#283500",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#161e00",
+                        "error": "#ffb4ab",
+                        "background": "#131313",
+                        "surface-container-low": "#1c1b1b",
+                        "surface": "#131313",
+                        "secondary-fixed-dim": "#b5d25e",
+                        "outline": "#8e9379",
+                        "secondary": "#b5d25e",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-container": "#5d7602",
+                        "inverse-primary": "#506600",
+                        "surface-tint": "#abd600",
+                        "error-container": "#93000a",
+                        "outline-variant": "#444933",
+                        "tertiary-fixed": "#d2e5f5",
+                        "on-primary": "#283500",
+                        "on-tertiary-fixed": "#0b1d29",
+                        "tertiary": "#ffffff",
+                        "on-secondary-container": "#defd83",
+                        "on-secondary-fixed-variant": "#3c4d00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(19, 19, 19, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .neon-glow {
+            box-shadow: 0 0 40px rgba(195, 244, 0, 0.04);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #c3f400 0%, #abd600 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 glass-nav flex justify-between items-center px-8 h-20 w-full max-w-none">
+<div class="text-2xl font-bold tracking-tighter text-white font-headline">StepX Noir</div>
+<div class="hidden md:flex gap-12 items-center font-headline tracking-tight uppercase">
+<a class="text-white/70 hover:text-[#CCFF00] transition-colors duration-300" href="#">Drops</a>
+<a class="text-[#CCFF00] border-b-2 border-[#CCFF00] pb-1" href="#">Vault</a>
+<a class="text-white/70 hover:text-[#CCFF00] transition-colors duration-300" href="#">Editorial</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-white/70 hover:text-[#CCFF00] transition-colors duration-300 flex items-center scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high ring-1 ring-white/10">
+<img alt="User profile avatar" data-alt="close-up portrait of a stylish person with modern aesthetic against a dark moody background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC5KPW2vMfkoSnfqthPkX_dQrfayoTlusWjOqa8wiMs90QD96z7JGwbzOhMB6lbSmv_4dGjhp-9TlcFfWjZptcVAh0o6wJxqKIce0Pq1Es-lyrYq7xEXPwSHouW2GxX10cnrtHE0VQBPo7Ac7m8LZF8sWJQOgRbv5zluotIbNZGIpqbtYl60aCM7tAtcWFCYjyGilGQ1f_MQzR9usrscFr7MULCNQ6gwD7QdFgB_tsNS5t8UlB0qMZ-RPcLU5MRxo22cHPnbC4Tw"/>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-48">
+<!-- Hero Section -->
+<section class="px-8 md:px-16 mb-40">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-7">
+<span class="font-label text-primary-fixed tracking-[0.2em] uppercase text-xs mb-6 block">The Inner Circle</span>
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] text-white mb-10">
+                        THE VAULT<br/><span class="text-white/20">MEMBERSHIP</span>
+</h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-xl leading-relaxed">
+                        Secure your position in the hierarchy. Exclusive access to the world's most coveted drops, curated for the elite collector.
+                    </p>
+</div>
+<div class="lg:col-span-5 relative group">
+<div class="absolute inset-0 bg-primary-fixed/5 blur-3xl rounded-full scale-75 group-hover:scale-90 transition-transform duration-700"></div>
+<div class="relative bg-surface-container-low p-4 aspect-[1.6/1] rounded-xl overflow-hidden shadow-2xl rotate-[-4deg] group-hover:rotate-0 transition-all duration-500 border border-white/5">
+<img alt="Vault Physical Card" class="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-700" data-alt="ultra-minimal close-up of a premium brushed titanium credit card with neon green laser engraved logo on a dark velvet surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBosNTpdP6ZQ8QKkdSb4xhK8A7UMzTnb_REwUJmNYaLc2Cxb1WRtd2zxIbWxC6CMyBFQUyIDbjB-zsc3I2OSnDsGsxStGyq08ackalhZhWp2Tn9mKvG0cLYgCqrC3H5O3twQRUcaact2QieSyYhQeMrImbft0Atom5S4E7hU7c7RSr67vcxwQkfWzWkGCMYSCItaTOczzgYiZUO3q7__jTFIJENLJbYPwzzipBW9-o2Y_tgB0hMGRx9140obACTYqNYO2lynZ53GA"/>
+<div class="absolute bottom-6 left-8">
+<p class="font-headline text-primary-fixed text-lg font-bold tracking-widest uppercase">Noir Elite</p>
+<p class="font-label text-white/40 text-[10px] tracking-widest uppercase">Access Level 01</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Membership Tiers -->
+<section class="px-8 md:px-16 mb-40">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5 rounded-2xl overflow-hidden neon-glow">
+<!-- Pro Tier -->
+<div class="bg-surface-container-low p-12 md:p-16 flex flex-col justify-between">
+<div>
+<h2 class="font-headline text-4xl font-bold text-white mb-2 uppercase tracking-tight">Pro</h2>
+<p class="font-body text-on-surface-variant mb-12">The foundation of elite collection.</p>
+<div class="space-y-6 mb-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label uppercase text-xs tracking-widest text-white">Priority Drop Access</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label uppercase text-xs tracking-widest text-white">Digital Authenticity Vault</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label uppercase text-xs tracking-widest text-white">Free Domestic Shipping</span>
+</div>
+<div class="flex items-center gap-4 opacity-30">
+<span class="material-symbols-outlined text-sm" data-icon="block">block</span>
+<span class="font-label uppercase text-xs tracking-widest">Global Concierge</span>
+</div>
+</div>
+</div>
+<div class="flex items-baseline gap-4 mb-8">
+<span class="font-headline text-4xl font-bold text-white">$19</span>
+<span class="font-label uppercase text-xs text-white/40 tracking-widest">/ Month</span>
+</div>
+<button class="w-full py-5 border border-white/20 text-white font-headline font-bold uppercase tracking-widest hover:bg-white hover:text-surface transition-all duration-300">
+                        Enroll in Pro
+                    </button>
+</div>
+<!-- Elite Tier -->
+<div class="bg-surface-container-high p-12 md:p-16 flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8">
+<span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 font-label text-[10px] font-black uppercase tracking-[0.2em]">Recommended</span>
+</div>
+<div>
+<h2 class="font-headline text-4xl font-bold text-primary-fixed mb-2 uppercase tracking-tight">Elite</h2>
+<p class="font-body text-on-surface-variant mb-12">Unrestricted access to the global archive.</p>
+<div class="space-y-6 mb-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label uppercase text-xs tracking-widest text-white">Guaranteed Drop Access</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label uppercase text-xs tracking-widest text-white">Free Worldwide Shipping</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label uppercase text-xs tracking-widest text-white">24/7 Personal Concierge</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label uppercase text-xs tracking-widest text-white">Physical Metal Membership Card</span>
+</div>
+</div>
+</div>
+<div class="flex items-baseline gap-4 mb-8">
+<span class="font-headline text-4xl font-bold text-white">$49</span>
+<span class="font-label uppercase text-xs text-white/40 tracking-widest">/ Month</span>
+</div>
+<button class="w-full py-5 primary-gradient text-on-primary-fixed font-headline font-black uppercase tracking-widest hover:scale-[1.02] active:scale-95 transition-all duration-300">
+                        Join the Vault
+                    </button>
+</div>
+</div>
+</section>
+<!-- Feature Grid (Bento) -->
+<section class="px-8 md:px-16">
+<div class="grid grid-cols-1 md:grid-cols-3 grid-rows-2 gap-8 h-[600px]">
+<div class="md:col-span-2 md:row-span-1 bg-surface-container-low rounded-xl p-10 relative overflow-hidden group">
+<div class="relative z-10">
+<h3 class="font-headline text-3xl font-bold text-white mb-4 uppercase">Worldwide<br/>Movement</h3>
+<p class="font-body text-on-surface-variant max-w-xs leading-relaxed">No borders. Elite members enjoy free secure shipping to any destination globally.</p>
+</div>
+<div class="absolute right-[-10%] bottom-[-20%] w-2/3 h-full opacity-20 group-hover:opacity-40 transition-opacity duration-700">
+<img alt="Global logistics" class="w-full h-full object-cover grayscale" data-alt="abstract monochromatic map of the world with glowing points of light connecting major fashion capitals" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkqtc-IqeEdL8yok6syEvis41cfVguYn2gGazis-neaY3Q8rmLIIYhlmZgd75h7CBMjCvh5i153e9ze9EJhGAEPZGaAx3pfvPjp-FLj1YoWMlF5cVRmk2ItprjNj9TMpduQhATuyT8XztM5S6PW0kIttXlMRrMMSMY-e2EMJjN08d8rk5JVho5U9piP8mkYmw-foYywebnb6qmHNJTBHRQqwEvoXN7D9EUXo_LW2smdVbenFR2ngeytWwBVbXX2UgwAUP2zvHBxg"/>
+</div>
+</div>
+<div class="md:col-span-1 md:row-span-2 bg-primary-fixed p-10 rounded-xl flex flex-col justify-end group">
+<span class="material-symbols-outlined text-on-primary-fixed text-6xl mb-6 group-hover:scale-110 transition-transform duration-500" data-icon="key_visualizer">key_visualizer</span>
+<h3 class="font-headline text-4xl font-black text-on-primary-fixed uppercase leading-none mb-4">Immediate<br/>Access</h3>
+<p class="font-body text-on-primary-fixed/80 leading-tight">Digital onboarding starts the moment you enroll. No waitlists. No queues.</p>
+</div>
+<div class="md:col-span-2 md:row-span-1 bg-surface-container-highest rounded-xl p-10 flex items-center justify-between group">
+<div class="max-w-md">
+<h3 class="font-headline text-3xl font-bold text-white mb-4 uppercase">The Archive</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">Unlock the backend of street culture. Historical data, rarity metrics, and future market predictions.</p>
+</div>
+<div class="hidden lg:block w-32 h-32 bg-surface-container rounded-full border border-white/10 flex items-center justify-center group-hover:rotate-45 transition-transform duration-700">
+<span class="material-symbols-outlined text-primary-fixed text-4xl" data-icon="lock_open">lock_open</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Callout -->
+<section class="mt-48 px-8 text-center">
+<h4 class="font-headline text-white/10 text-[10vw] font-black tracking-tighter leading-none select-none">STEPX NOIR</h4>
+<div class="max-w-2xl mx-auto -mt-12 relative z-10">
+<p class="font-label uppercase text-primary-fixed tracking-widest text-sm mb-8">Ready to evolve?</p>
+<button class="font-headline text-3xl font-bold text-white border-b-4 border-primary-fixed pb-2 hover:text-primary-fixed transition-colors duration-300">
+                    START YOUR ENROLLMENT
+                </button>
+</div>
+</section>
+</main>
+<footer class="bg-surface-container-lowest py-16 px-8 md:px-16">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-xl font-bold tracking-tighter text-white font-headline">StepX Noir</div>
+<div class="flex gap-8">
+<a class="font-label text-xs uppercase tracking-widest text-white/40 hover:text-white transition-colors" href="#">Privacy</a>
+<a class="font-label text-xs uppercase tracking-widest text-white/40 hover:text-white transition-colors" href="#">Terms</a>
+<a class="font-label text-xs uppercase tracking-widest text-white/40 hover:text-white transition-colors" href="#">Support</a>
+</div>
+<div class="text-white/20 text-[10px] font-label tracking-[0.3em] uppercase">©2024 StepX Noir Archive</div>
+</div>
+</footer>
+</body></html>

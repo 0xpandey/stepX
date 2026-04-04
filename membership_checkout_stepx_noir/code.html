@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StepX Noir | Membership Upgrade</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#ffffff",
+                    "primary-fixed": "#c3f400",
+                    "inverse-surface": "#e5e2e1",
+                    "tertiary-fixed-dim": "#b6c9d8",
+                    "secondary": "#b5d25e",
+                    "on-error": "#690005",
+                    "surface-dim": "#131313",
+                    "secondary-container": "#5d7602",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-bright": "#3a3939",
+                    "on-surface": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "error": "#ffb4ab",
+                    "surface-container-high": "#2a2a2a",
+                    "background": "#131313",
+                    "inverse-on-surface": "#313030",
+                    "error-container": "#93000a",
+                    "tertiary-fixed": "#d2e5f5",
+                    "surface": "#131313",
+                    "primary-container": "#c3f400",
+                    "on-secondary": "#283500",
+                    "on-secondary-container": "#defd83",
+                    "on-primary": "#283500",
+                    "on-secondary-fixed-variant": "#3c4d00",
+                    "tertiary": "#ffffff",
+                    "outline-variant": "#444933",
+                    "on-secondary-fixed": "#161e00",
+                    "on-primary-fixed": "#161e00",
+                    "on-background": "#e5e2e1",
+                    "on-tertiary-fixed": "#0b1d29",
+                    "outline": "#8e9379",
+                    "inverse-primary": "#506600",
+                    "on-tertiary": "#21323e",
+                    "secondary-fixed": "#d0ef77",
+                    "surface-tint": "#abd600",
+                    "primary-fixed-dim": "#abd600",
+                    "on-primary-container": "#556d00",
+                    "tertiary-container": "#d2e5f5",
+                    "on-tertiary-container": "#556774",
+                    "on-surface-variant": "#c4c9ac",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-highest": "#353534",
+                    "secondary-fixed-dim": "#b5d25e",
+                    "surface-variant": "#353534",
+                    "on-tertiary-fixed-variant": "#374956",
+                    "surface-container": "#201f1f",
+                    "on-primary-fixed-variant": "#3c4d00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-shift-via-blur {
+        background: linear-gradient(to bottom, rgba(19,19,19,0.8), rgba(19,19,19,0.4));
+      }
+      .neon-glow-hover:hover {
+        box-shadow: 0 0 20px rgba(204, 255, 0, 0.2);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/60 backdrop-blur-xl shadow-[0_0_40px_rgba(204,255,0,0.04)]">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-none">
+<div class="text-2xl font-black tracking-tighter text-white hover:text-[#CCFF00] transition-colors font-headline uppercase cursor-pointer">
+                StepX Noir
+            </div>
+<div class="hidden md:flex gap-12 font-headline tracking-tighter uppercase font-bold">
+<a class="text-white/70 hover:text-white transition-colors" href="#">The Vault</a>
+<a class="text-white/70 hover:text-white transition-colors" href="#">Drops</a>
+<a class="text-white/70 hover:text-white transition-colors" href="#">Curation</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-white/70 hover:text-[#CCFF00] transition-all scale-95 active:scale-90" data-icon="shopping_bag">shopping_bag</button>
+<button class="material-symbols-outlined text-[#CCFF00] transition-all scale-95 active:scale-90" data-icon="person">person</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Breadcrumb / Return -->
+<div class="mb-12">
+<a class="flex items-center gap-2 text-white/40 hover:text-[#CCFF00] transition-colors group" href="#">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+<span class="font-label uppercase tracking-widest text-[10px] font-bold">Return to Plans</span>
+</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left: Selection Summary & Benefits (Editorial Layout) -->
+<div class="lg:col-span-5 space-y-12">
+<section>
+<span class="text-primary-fixed font-label uppercase tracking-[0.2em] text-xs font-bold mb-4 block">Secure Checkout</span>
+<h1 class="font-headline text-5xl md:text-6xl font-black tracking-tighter text-white uppercase leading-none mb-6">
+                        Activate <br/> <span class="text-primary-fixed">Elite Tier</span>
+</h1>
+<div class="flex items-baseline gap-3">
+<span class="font-headline text-4xl font-bold text-white">$49</span>
+<span class="text-white/40 font-label uppercase tracking-widest text-sm">/ Per Month</span>
+</div>
+</section>
+<!-- Benefits Artifacts -->
+<div class="space-y-6">
+<div class="bg-surface-container-low p-8 rounded-lg border-l-4 border-primary-fixed flex items-start gap-6">
+<div class="bg-primary-fixed/10 p-3 rounded-md">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h3 class="font-headline text-white uppercase font-bold tracking-tight mb-1">Guaranteed Drop Access</h3>
+<p class="text-white/50 text-sm leading-relaxed">Early reservation slots for every StepX Noir limited release. No queues, no bots.</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-lg flex items-start gap-6">
+<div class="bg-white/5 p-3 rounded-md">
+<span class="material-symbols-outlined text-white/40" data-icon="local_shipping">local_shipping</span>
+</div>
+<div>
+<h3 class="font-headline text-white uppercase font-bold tracking-tight mb-1">Free Shipping</h3>
+<p class="text-white/50 text-sm leading-relaxed">Priority international courier services included on all footwear and apparel orders.</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-lg flex items-start gap-6">
+<div class="bg-white/5 p-3 rounded-md">
+<span class="material-symbols-outlined text-white/40" data-icon="support_agent">support_agent</span>
+</div>
+<div>
+<h3 class="font-headline text-white uppercase font-bold tracking-tight mb-1">Personal Concierge</h3>
+<p class="text-white/50 text-sm leading-relaxed">Direct 1-on-1 access to our curation experts for sizing and rare item sourcing.</p>
+</div>
+</div>
+</div>
+<!-- Product Preview Image -->
+<div class="relative group overflow-hidden rounded-xl aspect-[16/9]">
+<img alt="Elite Membership" class="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700" data-alt="Close-up of a premium designer sneaker with high-contrast studio lighting on a dark obsidian background, feeling moody and luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrQ1kvAA45RtH1fjA8Lhrhskppdkw1cAPbklDa_inrcM6KunoLZl9EWiN5pJkvlPJBsj3xn1xUE63ot3ff5VHEP3MA91U1mYe3V7KS02JYFCKJe3oka9HOJ8J2Iv8Cn2J1yl7x235UqJjkGMDH56LI7DHbRrqA9Kb3hMbZNIl5yfBQ1hz94W9uwRM_2Fd6De9T69YfA1uGVNRpxElPUYcSme9N26aGkFwlyNJn8QPhxNLvpkRXO4queYVtgp-VMsyGH7Um2MsFbQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-white/40">StepX Noir / Vault Member</span>
+</div>
+</div>
+</div>
+<!-- Right: Payment Form (Technical/Secure) -->
+<div class="lg:col-span-7">
+<div class="bg-surface-container-low p-10 md:p-14 rounded-2xl relative border border-white/5 shadow-2xl">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-symbols-outlined text-white/10 text-6xl">lock</span>
+</div>
+<h2 class="font-headline text-2xl font-bold uppercase tracking-tight text-white mb-10">Payment Details</h2>
+<form class="space-y-8">
+<!-- Cardholder -->
+<div class="group">
+<label class="block font-label text-[10px] uppercase tracking-widest text-white/40 mb-3 font-bold">Cardholder Name</label>
+<input class="w-full bg-surface-container-highest border-none focus:ring-0 text-white p-4 font-body rounded-md transition-all border-b-2 border-transparent focus:border-primary-fixed placeholder:text-white/10" placeholder="Full legal name" type="text"/>
+</div>
+<!-- Card Number -->
+<div class="group">
+<label class="block font-label text-[10px] uppercase tracking-widest text-white/40 mb-3 font-bold">Card Information</label>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none focus:ring-0 text-white p-4 font-body rounded-md transition-all border-b-2 border-transparent focus:border-primary-fixed placeholder:text-white/10" placeholder="0000 0000 0000 0000" type="text"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 flex gap-2">
+<span class="w-8 h-5 bg-white/5 rounded-sm"></span>
+<span class="w-8 h-5 bg-white/5 rounded-sm"></span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<!-- Expiry -->
+<div>
+<label class="block font-label text-[10px] uppercase tracking-widest text-white/40 mb-3 font-bold">Expiry Date</label>
+<input class="w-full bg-surface-container-highest border-none focus:ring-0 text-white p-4 font-body rounded-md transition-all border-b-2 border-transparent focus:border-primary-fixed placeholder:text-white/10" placeholder="MM / YY" type="text"/>
+</div>
+<!-- CVV -->
+<div>
+<label class="block font-label text-[10px] uppercase tracking-widest text-white/40 mb-3 font-bold">CVC / CVV</label>
+<input class="w-full bg-surface-container-highest border-none focus:ring-0 text-white p-4 font-body rounded-md transition-all border-b-2 border-transparent focus:border-primary-fixed placeholder:text-white/10" placeholder="***" type="text"/>
+</div>
+</div>
+<div class="pt-8 space-y-6">
+<div class="flex justify-between items-center py-4 border-t border-white/5">
+<span class="font-label text-white/40 uppercase tracking-widest text-xs">Monthly Subscription</span>
+<span class="font-headline text-white font-bold">$49.00</span>
+</div>
+<div class="flex justify-between items-center py-4 border-t border-white/5">
+<span class="font-label text-white/40 uppercase tracking-widest text-xs">Tax (0%)</span>
+<span class="font-headline text-white font-bold">$0.00</span>
+</div>
+<div class="flex justify-between items-center py-6 border-y border-white/5">
+<span class="font-label text-white uppercase tracking-[0.2em] text-sm font-black">Total Due Today</span>
+<span class="font-headline text-primary-fixed text-2xl font-black">$49.00</span>
+</div>
+</div>
+<!-- CTA -->
+<button class="w-full py-6 bg-primary-fixed text-on-primary-fixed font-headline font-black uppercase tracking-tighter text-xl rounded-md hover:brightness-110 transition-all duration-300 flex justify-center items-center gap-3 shadow-[0_0_30px_rgba(195,244,0,0.2)] group" type="button">
+                            Activate Membership
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<div class="flex items-center justify-center gap-2 pt-4">
+<span class="material-symbols-outlined text-[12px] text-white/20" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span class="font-label text-[9px] uppercase tracking-widest text-white/20">Secure AES-256 Bit Encrypted Transaction</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-[#0E0E0E] w-full py-20 px-8 mt-32 tonal-shift-bg">
+<div class="flex flex-col md:flex-row justify-between items-start w-full max-w-7xl mx-auto border-t border-white/5 pt-12">
+<div class="mb-12 md:mb-0">
+<div class="font-['Space_Grotesk'] font-black text-[#CCFF00] text-3xl mb-8 uppercase">StepX Noir</div>
+<p class="font-['Manrope'] text-sm tracking-normal text-white/50 max-w-xs leading-relaxed">
+                    The intersection of high-end editorial and street culture. Curated for the few.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<span class="text-white font-bold font-label uppercase text-[10px] tracking-widest mb-2">Navigation</span>
+<a class="font-['Manrope'] text-sm tracking-normal text-white/40 hover:text-[#CCFF00] hover:translate-x-1 transition-transform duration-300" href="#">Membership</a>
+<a class="font-['Manrope'] text-sm tracking-normal text-white/40 hover:text-[#CCFF00] hover:translate-x-1 transition-transform duration-300" href="#">Returns</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-white font-bold font-label uppercase text-[10px] tracking-widest mb-2">Legal</span>
+<a class="font-['Manrope'] text-sm tracking-normal text-white/40 hover:text-[#CCFF00] hover:translate-x-1 transition-transform duration-300" href="#">Privacy</a>
+<a class="font-['Manrope'] text-sm tracking-normal text-white/40 hover:text-[#CCFF00] hover:translate-x-1 transition-transform duration-300" href="#">Terms</a>
+</div>
+<div class="flex flex-col gap-4 col-span-2 md:col-span-1">
+<span class="text-white font-bold font-label uppercase text-[10px] tracking-widest mb-2">Culture</span>
+<a class="font-['Manrope'] text-sm tracking-normal text-white/40 hover:text-[#CCFF00] hover:translate-x-1 transition-transform duration-300" href="#">Authentication</a>
+</div>
+</div>
+</div>
+<div class="w-full max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-['Manrope'] text-xs tracking-normal text-white/30">
+                © 2024 StepX Noir. Engineered for the Culture.
+            </div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-white/20 text-xl cursor-pointer hover:text-white transition-colors" data-icon="language">language</span>
+<span class="material-symbols-outlined text-white/20 text-xl cursor-pointer hover:text-white transition-colors" data-icon="payments">payments</span>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-4 bg-[#1C1B1B]/80 backdrop-blur-2xl z-50 rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-colors active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="grid_view">grid_view</span>
+<span class="font-['Manrope'] text-[8px] uppercase tracking-widest font-bold">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-colors active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="schedule">schedule</span>
+<span class="font-['Manrope'] text-[8px] uppercase tracking-widest font-bold">Drops</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-colors active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="lock_open">lock_open</span>
+<span class="font-['Manrope'] text-[8px] uppercase tracking-widest font-bold">Vault</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#CCFF00] bg-[#CCFF00]/10 rounded-xl px-4 py-2 active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Manrope'] text-[8px] uppercase tracking-widest font-bold">Profile</span>
+</a>
+</nav>
+</body></html>
