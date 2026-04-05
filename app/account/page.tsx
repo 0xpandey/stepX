@@ -1,12 +1,22 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowLeft, User, Package, Heart, Settings, CreditCard, MapPin, Bell, Shield, LogOut, ChevronRight, Crown } from "lucide-react"
+import { ArrowLeft, User, Package, Heart, Settings, CreditCard, MapPin, Bell, Shield, LogOut, ChevronRight, Crown, type LucideIcon } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { MobileNav } from "@/components/mobile-nav"
 import { Footer } from "@/components/footer"
 
-const menuItems = [
+type MenuSection = {
+  section: string;
+  items: {
+    icon: LucideIcon;
+    label: string;
+    href: string;
+    badge?: string;
+  }[];
+};
+
+const menuItems: MenuSection[] = [
   {
     section: "Orders & Purchases",
     items: [

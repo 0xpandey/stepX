@@ -6,20 +6,19 @@ import { Heart, ShoppingBag, Trash2, ArrowLeft } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { MobileNav } from "@/components/mobile-nav"
 import { Footer } from "@/components/footer"
-import { useStore } from "@/lib/store-context"
+import { useWishlist, useCart } from "@/lib/store-context"
 
 export default function WishlistPage() {
-  const { wishlist, removeFromWishlist, addToCart } = useStore()
+  const { wishlist, removeFromWishlist } = useWishlist()
+  const { addToCart } = useCart()
 
   const handleAddToCart = (item: typeof wishlist[0]) => {
-    addToCart({
-      id: item.id,
-      name: item.name,
-      price: item.price,
-      image: item.image,
-      size: "US 10",
-      quantity: 1,
-    })
+    addToCart(
+      item.product,
+      1,
+      item.selectedSize || item.product.sizes[0]?.size || "US 10",
+      item.selectedColor || item.product.colors[0]?.name || ""
+    )
   }
 
   return (
@@ -60,13 +59,15 @@ export default function WishlistPage() {
             </div>
           ) : (
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-              {wishlist.map((item) => (
-                <div key={item.id} className="group relative">
-                  <Link href={`/product/${item.id}`}>
+              {wishlist.map((wishlistItem) => {
+                const product = wishlistItem.product;
+                return (
+                <div key={product.id} className="group relative">
+                  <Link href={`/product/${product.id}`}>
                     <div className="aspect-square bg-card overflow-hidden mb-3">
                       <Image
-                        src={item.image}
-                        alt={item.name}
+                        src={product.images[0]}
+                        alt={product.name}
                         width={400}
                         height={400}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -77,7 +78,7 @@ export default function WishlistPage() {
                   {/* Actions */}
                   <div className="absolute top-3 right-3 flex flex-col gap-2">
                     <button
-                      onClick={() => removeFromWishlist(item.id)}
+                      onClick={() => removeFromWishlist(product.id)}
                       className="w-10 h-10 bg-background/90 backdrop-blur-sm flex items-center justify-center hover:bg-destructive hover:text-destructive-foreground transition-colors"
                     >
                       <Trash2 className="w-5 h-5" />
@@ -85,20 +86,20 @@ export default function WishlistPage() {
                   </div>
 
                   <div className="space-y-1">
-                    <h3 className="font-medium text-sm truncate">{item.name}</h3>
-                    <p className="text-muted-foreground text-sm">{item.brand}</p>
-                    <p className="font-semibold">${item.price}</p>
+                    <h3 className="font-medium text-sm truncate">{product.name}</h3>
+                    <p className="text-muted-foreground text-sm">{product.brand}</p>
+                    <p className="font-semibold">${product.price}</p>
                   </div>
 
                   <button
-                    onClick={() => handleAddToCart(item)}
+                    onClick={() => handleAddToCart(wishlistItem)}
                     className="mt-3 w-full bg-foreground text-background py-2.5 text-sm font-medium hover:bg-foreground/90 transition-colors flex items-center justify-center gap-2"
                   >
                     <ShoppingBag className="w-4 h-4" />
                     Add to Cart
                   </button>
                 </div>
-              ))}
+              )})}
             </div>
           )}
         </div>
