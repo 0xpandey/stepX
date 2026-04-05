@@ -76,7 +76,7 @@ export function Navbar() {
 
           {/* Wishlist */}
           <Link
-            href="/account/wishlist"
+            href="/wishlist"
             className="hidden sm:flex text-white/70 hover:text-primary-fixed transition-colors relative"
           >
             <Heart className="w-5 h-5" />
@@ -102,7 +102,7 @@ export function Navbar() {
 
           {/* User Profile */}
           <Link
-            href="/account/dashboard"
+            href="/account"
             className="hidden sm:flex items-center gap-2"
           >
             {state.user ? (
@@ -168,14 +168,14 @@ export function Navbar() {
             ))}
             <hr className="border-white/5 my-2" />
             <Link
-              href="/account/dashboard"
+              href="/account"
               onClick={() => dispatch({ type: "TOGGLE_MENU", payload: false })}
               className="font-headline font-bold text-xl tracking-tighter py-2 text-white/70 hover:text-white transition-colors"
             >
               Account
             </Link>
             <Link
-              href="/account/wishlist"
+              href="/wishlist"
               onClick={() => dispatch({ type: "TOGGLE_MENU", payload: false })}
               className="font-headline font-bold text-xl tracking-tighter py-2 text-white/70 hover:text-white transition-colors"
             >
