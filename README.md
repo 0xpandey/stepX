@@ -6,6 +6,9 @@ This project focuses on **UI/UX, performance, and user flow**, making it a stron
 
 ---
 
+## Deployment link:
+https://step-xsneak.vercel.app/
+
 ## 🚀 Project Overview
 
 StepX is a fully connected frontend application that demonstrates how a user moves from browsing products to completing a purchase.
